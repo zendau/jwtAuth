@@ -1,18 +1,24 @@
-import React, {FC, FunctionComponent} from 'react'
-
-import Main from "./components/main/main"
-
+import React from 'react'
 import {store} from "./redux/index"
+import AppRouter from "./router/AppRouter"
 
-interface Props {
-  reduxStore: typeof store
-}
+import {AuthContext} from "./context/AuthContext"
+import {Provider} from "react-redux";
 
-const App : FC<Props> = (props: Props) => {
 
-  console.log("props", props)
+
+
+const App : React.FC = () => {
+
   return (
-      <Main/>
+      <Provider store={store}>
+          <AuthContext.Provider value={false}>
+
+          </AuthContext.Provider>
+        <AppRouter/>
+      </Provider>
+
+
   )
 }
 

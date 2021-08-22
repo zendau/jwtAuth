@@ -2,23 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useTypedSelector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/rootReduser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/types/UserTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/axios/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/form/login.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/posts/posts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/context/AuthContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/router/Routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/favicon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user.route.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +31,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -58,7 +62,7 @@
       <recent name="E:\Projects\JwtAuth\frontend\src\redux" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:server">
+  <component name="RunManager" selected="npm.start:front">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -103,7 +107,9 @@
       <option name="presentableId" value="Default" />
       <updated>1629379505090</updated>
       <workItem from="1629379510013" duration="8201000" />
-      <workItem from="1629451254739" duration="18955000" />
+      <workItem from="1629451254739" duration="19091000" />
+      <workItem from="1629532350811" duration="9899000" />
+      <workItem from="1629619787068" duration="12110000" />
     </task>
     <servers />
   </component>
@@ -132,7 +138,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
-          <line>28</line>
+          <line>31</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

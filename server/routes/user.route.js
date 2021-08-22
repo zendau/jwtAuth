@@ -12,4 +12,9 @@ router.get("/refresh", UserController.refresh)
 
 router.get("/all", authMiddleware, UserController.allUsers)
 
+router.get("/test", (req, res) => {
+    console.log(req.headers)
+    res.status(401).json({"ok":"test"})
+})
+
 module.exports = router
