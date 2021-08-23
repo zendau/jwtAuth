@@ -10,16 +10,17 @@ import {Provider} from "react-redux";
 
 const App : React.FC = () => {
 
-  return (
-      <Provider store={store}>
-          <AuthContext.Provider value={false}>
+    const [authStatus, setAuthStatus] = React.useState(false);
 
-          </AuthContext.Provider>
-        <AppRouter/>
-      </Provider>
+      return (
+          <Provider store={store}>
+              <AuthContext.Provider value={{authStatus, setAuthStatus}}>
+                  <AppRouter/>
+              </AuthContext.Provider>
+          </Provider>
 
 
-  )
+      )
 }
 
 export default App

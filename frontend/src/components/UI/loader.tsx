@@ -1,10 +1,15 @@
 import React from 'react';
 
-const Loader : React.FC = () => {
+interface  ILoaderProps {
+    status: boolean | undefined
+}
+
+const Loader : React.FC<ILoaderProps> = ({status,children}) => {
     return (
-        <div>
-            <h1>Происходит загрузка</h1>
-        </div>
+        <>
+            <h1 style={ status ? {display: "block"} : {display: "none"}}>Происходит загрузка</h1>
+            {children}
+        </>
     );
 };
 

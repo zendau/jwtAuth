@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-import Login from "../form/login"
+import Login from "../../pages/login"
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import Loader from "../UI/loader"
 

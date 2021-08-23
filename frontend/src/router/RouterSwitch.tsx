@@ -1,5 +1,6 @@
 import React from 'react'
-import {NavLink, Redirect, Route, Switch} from "react-router-dom"
+import {Redirect, Route, Switch} from "react-router-dom"
+import Navbar from "./Navbar";
 
 interface INavPaths {
     to: string
@@ -20,18 +21,12 @@ interface IRouterSwitchProps {
 }
 
 
+
 const RouterSwitch : React.FC<IRouterSwitchProps> = ({redirect, typeRoutes, paths}) => {
+
     return (
         <>
-            <nav>
-                <ul>
-                    {paths.map(path =>
-                        <li key={path.to}>
-                            <NavLink to={path.to} >{path.name}</NavLink>
-                        </li>
-                    )}
-                </ul>
-            </nav>
+            <Navbar paths={paths} />
             <Switch>
                 {typeRoutes.map(route => <Route
                     exact={route.exact}

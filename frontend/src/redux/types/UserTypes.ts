@@ -3,7 +3,8 @@ export enum userTypes {
     USER_REGISTER="USER_REGISTER",
     USER_FETCH_SUCCESS="USER_FETCH_SUCCESS",
     USER_FETCH_ERROR="USER_FETCH_ERROR",
-    USER_LOGOUT="USER_LOGOUT"
+    USER_LOGOUT="USER_LOGOUT",
+    CLEAR_ERROR_MESSAGE="CLEAR_ERROR_MESSAGE"
 }
 
 export interface UserState {
@@ -37,9 +38,14 @@ interface  UserLogoutAction {
     type: userTypes.USER_LOGOUT
 }
 
+interface ClearErrorMessageAction {
+    type: userTypes.CLEAR_ERROR_MESSAGE
+}
+
 export type UserActionType =
     UserLoginAction |
     UserRegisterAction |
     UserFetchSuccessAction |
     UserFetchErrorAction |
-    UserLogoutAction
+    UserLogoutAction |
+    ClearErrorMessageAction

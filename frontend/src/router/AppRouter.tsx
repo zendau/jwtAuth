@@ -9,12 +9,11 @@ import {AuthContext} from "../context/AuthContext";
 
 const AppRouter : React.FC = () => {
 
-    const isAuth = useContext(AuthContext)
-
+    const {authStatus} = useContext(AuthContext)
     return (
         <Router>
 
-            {isAuth
+            {authStatus
                 ?
                 <RouterSwitch typeRoutes={privateRoutes} redirect='/posts' paths={privatePaths}/>
                 :

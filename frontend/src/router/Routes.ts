@@ -1,5 +1,5 @@
-import Posts from "../components/posts/posts"
-import Login from "../components/form/login"
+import Posts from "../pages/posts"
+import Login from "../pages/login"
 
 export const privateRoutes = [
     {

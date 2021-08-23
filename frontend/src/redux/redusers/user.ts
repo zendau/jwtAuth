@@ -1,4 +1,4 @@
-import {userTypes, UserActionType, UserState} from "../types/UserTypes"
+import {UserActionType, UserState, userTypes} from "../types/UserTypes"
 
 const initState : UserState = {
     id: "",
@@ -35,6 +35,11 @@ export default function reducer (state = initState, action : UserActionType) : U
         case userTypes.USER_LOGOUT:
             return {
                 email: "", isActivate: false, id: "", isLoaded: false
+            }
+
+        case userTypes.CLEAR_ERROR_MESSAGE:
+            return {
+                email: "", id: "", isActivate: false, error: ""
             }
 
         default:
