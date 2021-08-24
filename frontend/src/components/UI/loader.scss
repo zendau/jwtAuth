@@ -1,0 +1,17 @@
+.overflow {
+  width: 100%;
+  position: absolute;
+  min-height: 100vh;
+  height: 100%;
+  background-color: gray;
+  z-index: 100;
+}
+
+.loader {
+  position: absolute;
+  z-index: 200;
+  color: white;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

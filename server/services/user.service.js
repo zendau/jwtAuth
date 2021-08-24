@@ -76,6 +76,22 @@ class UserService {
         return users;
     }
 
+    async logout(token) {
+
+        if (!token) {
+            throw ApiError.UnauthorizedError();
+        }
+
+        const res = await TokenService.removeToken(token)
+
+        if (res.ok !== 1) {
+            throw ApiError.UnauthorizedError();
+        }
+
+        return res
+
+    }
+
 }
 
 module.exports = new UserService()

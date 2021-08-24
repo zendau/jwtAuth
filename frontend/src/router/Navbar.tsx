@@ -1,6 +1,7 @@
 import React from 'react';
 import {useAuthContext} from "../context/AuthContext";
 import {NavLink} from "react-router-dom";
+import {useAction} from "../hooks/useAction";
 
 interface INavPaths {
     to: string
@@ -32,8 +33,12 @@ const Navbar : React.FC<INavbarProps> = ({paths}) => {
 
     const {authStatus, setAuthStatus} = useAuthContext()
 
+    const {logout : logoutUser} = useAction()
+
     const logout = () => {
+        logoutUser()
         setAuthStatus(false)
+
     }
 
     return (

@@ -1,11 +1,16 @@
+import {IUser} from "../../interfaces/user";
+
 export enum userTypes {
     USER_LOGIN= "USER_LOGIN",
     USER_REGISTER="USER_REGISTER",
     USER_FETCH_SUCCESS="USER_FETCH_SUCCESS",
     USER_FETCH_ERROR="USER_FETCH_ERROR",
     USER_LOGOUT="USER_LOGOUT",
-    CLEAR_ERROR_MESSAGE="CLEAR_ERROR_MESSAGE"
+    CLEAR_ERROR_MESSAGE="CLEAR_ERROR_MESSAGE",
+    GET_ALL_USERS="GET_ALL_USERS"
 }
+
+
 
 export interface UserState {
     email: string
@@ -13,6 +18,7 @@ export interface UserState {
     id: string,
     isLoaded?: boolean
     error?: string | null
+    users?: IUser[]
 }
 
 interface UserLoginAction {
@@ -42,10 +48,16 @@ interface ClearErrorMessageAction {
     type: userTypes.CLEAR_ERROR_MESSAGE
 }
 
+interface GetAllUsers {
+    type: userTypes.GET_ALL_USERS
+    payload: IUser[]
+}
+
 export type UserActionType =
     UserLoginAction |
     UserRegisterAction |
     UserFetchSuccessAction |
     UserFetchErrorAction |
     UserLogoutAction |
-    ClearErrorMessageAction
+    ClearErrorMessageAction |
+    GetAllUsers

@@ -1,37 +1,33 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext} from 'react';
 import {BrowserRouter as Router} from "react-router-dom";
 import {privateRoutes, publicRoutes} from "./Routes";
 
 
 import {privatePaths, publicPaths} from "./NavPaths"
 import RouterSwitch from "./RouterSwitch";
-import {AuthContext, useAuthContext} from "../context/AuthContext";
-import {useAction} from "../hooks/useAction";
+import {AuthContext} from "../context/AuthContext";
+import Loader from "../components/UI/loader";
+import {useTypedSelector} from "../hooks/useTypedSelector";
 
 const AppRouter : React.FC = () => {
 
-    const {checkAuth} = useAction()
-
-    const {setAuthStatus} =  useAuthContext()
-
-    useEffect(() => {
-        if (localStorage.getItem('token')) {
-            checkAuth(setAuthStatus)
-        }
-    }, [])
-
     const {authStatus} = useContext(AuthContext)
+
+    const state = useTypedSelector(state => state.user)
+
     return (
-        <Router>
+        <Loader status={state.isLoaded}>
+            <Router>
 
-            {authStatus
-                ?
-                <RouterSwitch typeRoutes={privateRoutes} redirect='/posts' paths={privatePaths}/>
-                :
-                <RouterSwitch typeRoutes={publicRoutes} redirect='/login' paths={publicPaths}/>
-            }
+                {authStatus
+                    ?
+                    <RouterSwitch typeRoutes={privateRoutes} redirect='/posts' paths={privatePaths}/>
+                    :
+                    <RouterSwitch typeRoutes={publicRoutes} redirect='/login' paths={publicPaths}/>
+                }
 
-        </Router>
+            </Router>
+        </Loader>
     )
 }
 

@@ -49,6 +49,22 @@ class UserController {
         }
     }
 
+    async logoutUser(req, res, next) {
+        try {
+            const {JWTRefreshToken} = req.cookies
+
+            const resLogout = await UserService.logout(JWTRefreshToken)
+
+            res.clearCookie("JWTRefreshToken")
+
+
+            return res.json(resLogout)
+
+        }catch (e) {
+            next(e)
+        }
+    }
+
 }
 
 module.exports = new UserController()

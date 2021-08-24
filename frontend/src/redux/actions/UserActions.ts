@@ -1,5 +1,4 @@
 import {Dispatch} from "redux";
-import axios from "axios";
 
 import $api from "../../axios"
 
@@ -42,7 +41,6 @@ export const cleanErrorMessage = () => {
 export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
-            debugger
             dispatch({type: userTypes.USER_LOGIN})
 
             const fetchData = await $api.get(`/user/refresh`)
@@ -63,6 +61,37 @@ export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
                 type: userTypes.USER_FETCH_ERROR,
                 payload: e.response.data.message
             })
+        }
+    }
+}
+
+export const logout = () => {
+    return async (dispatch: Dispatch<UserActionType>) => {
+        try {
+
+            await $api.get(`/user/logout`)
+
+            localStorage.removeItem("token")
+
+            dispatch({
+                type: userTypes.USER_LOGOUT,
+            })
+        } catch (e) {
+            console.error(e)
+        }
+    }
+}
+
+export const getAllUsers = () => {
+    return async (dispatch: Dispatch<UserActionType>) => {
+        try {
+            const fetchData = await $api.get(`/user/all`)
+            dispatch({
+                type: userTypes.GET_ALL_USERS,
+                payload: fetchData.data
+            })
+        } catch (e) {
+            console.error(e)
         }
     }
 }

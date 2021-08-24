@@ -39,7 +39,12 @@ export default function reducer (state = initState, action : UserActionType) : U
 
         case userTypes.CLEAR_ERROR_MESSAGE:
             return {
-                email: "", id: "", isActivate: false, error: ""
+                ...state, error: ""
+            }
+
+        case userTypes.GET_ALL_USERS:
+            return {
+                ...state, users: action.payload
             }
 
         default:
