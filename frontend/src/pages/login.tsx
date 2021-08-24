@@ -20,7 +20,7 @@ const Login : React.FC = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
-    const {authStatus, setAuthStatus} =  useAuthContext()
+    const {setAuthStatus} =  useAuthContext()
 
     useEffect(() => {
         console.log("rendered")
