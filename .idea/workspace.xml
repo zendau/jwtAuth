@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/loader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/controllers/post.controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/dtos/post.dto.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/post.model.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/post.route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/services/post.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UI/loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI/loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/posts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/redusers/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/types/UserTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/types/UserTypes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/token.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/token.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/services/user.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +23,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -116,7 +107,9 @@
       <workItem from="1629619787068" duration="12561000" />
       <workItem from="1629697819450" duration="16723000" />
       <workItem from="1629746450561" duration="6387000" />
-      <workItem from="1629794626032" duration="20358000" />
+      <workItem from="1629794626032" duration="21000000" />
+      <workItem from="1629919603938" duration="301000" />
+      <workItem from="1629973709219" duration="14341000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -139,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629797548602</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fix logout system">
+      <created>1629837546552</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629837546552</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +161,8 @@
     <MESSAGE value="add route system" />
     <MESSAGE value="Add ui elements. Error component and Loader component. Fix some bugs" />
     <MESSAGE value="Add JWT Auto-auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add JWT Auto-auth" />
+    <MESSAGE value="Fix logout system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix logout system" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -184,20 +185,41 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
           <line>21</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/middlewares/auth.middleware.js</url>
           <line>5</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
           <line>55</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/controllers/post.controller.js</url>
+          <line>34</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
+          <line>61</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
+          <line>14</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
+          <line>38</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
