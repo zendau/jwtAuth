@@ -5,15 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/controllers/post.controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/dtos/post.dto.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/post.model.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/post.route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/services/post.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/redux/types/PostTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/token.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/token.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/user.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/user.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/rootReduser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/rootReduser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +29,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
-        <option value="TypeScript JSX File" />
         <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -53,11 +59,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\JwtAuth\frontend\src\pages\post" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages" />
       <recent name="E:\Projects\JwtAuth\frontend\src\redux" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:server">
+  <component name="RunManager" selected="npm.start:front">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -109,7 +116,7 @@
       <workItem from="1629746450561" duration="6387000" />
       <workItem from="1629794626032" duration="21000000" />
       <workItem from="1629919603938" duration="301000" />
-      <workItem from="1629973709219" duration="14341000" />
+      <workItem from="1629973709219" duration="22944000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -139,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629837546552</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Finish develop server post functional. Add create, edit, delete by id, get by id, geUserPosts and getAllPosts">
+      <created>1629999410432</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1629999410432</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +176,8 @@
     <MESSAGE value="Add ui elements. Error component and Loader component. Fix some bugs" />
     <MESSAGE value="Add JWT Auto-auth" />
     <MESSAGE value="Fix logout system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix logout system" />
+    <MESSAGE value="Finish develop server post functional. Add create, edit, delete by id, get by id, geUserPosts and getAllPosts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish develop server post functional. Add create, edit, delete by id, get by id, geUserPosts and getAllPosts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -171,31 +186,6 @@
           <url>file://$PROJECT_DIR$/server/services/user.service.js</url>
           <line>57</line>
           <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
-          <line>36</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/services/user.service.js</url>
-          <line>60</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
-          <line>21</line>
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/middlewares/auth.middleware.js</url>
-          <line>5</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
-          <line>55</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/post.controller.js</url>

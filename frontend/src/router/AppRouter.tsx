@@ -21,7 +21,7 @@ const AppRouter : React.FC = () => {
 
                 {authStatus
                     ?
-                    <RouterSwitch typeRoutes={privateRoutes} redirect='/posts' paths={privatePaths}/>
+                    <RouterSwitch typeRoutes={privateRoutes} redirect='/account' paths={privatePaths}/>
                     :
                     <RouterSwitch typeRoutes={publicRoutes} redirect='/login' paths={publicPaths}/>
                 }

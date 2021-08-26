@@ -3,7 +3,7 @@ import {useTypedSelector} from "../hooks/useTypedSelector"
 import {useAction} from "../hooks/useAction"
 
 
-const Posts: React.FC = () => {
+const Account: React.FC = () => {
 
     const state = useTypedSelector(state => state.user)
 
@@ -34,4 +34,4 @@ const Posts: React.FC = () => {
     )
 }
 
-export default Posts;
+export default Account;

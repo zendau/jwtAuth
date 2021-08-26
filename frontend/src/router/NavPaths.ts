@@ -11,9 +11,15 @@ export const publicPaths : IPath[] = [
 
 export const privatePaths : IPath[] = [
     {
-        to: "/posts", name: "Posts"
+        to: "/account", name: "Account"
     },
     {
         to: "/logout", name: "Exit"
+    },
+    {
+        to: "/post/create", name: "Create post"
+    },
+    {
+        to: "/post/all", name: "All posts"
     }
 ]
