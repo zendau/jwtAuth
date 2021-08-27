@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useAction} from "../../hooks/useAction";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {IPost} from "../../interfaces/post";
@@ -7,38 +7,51 @@ import { useHistory, Link} from "react-router-dom";
 
 const AllPosts : React.FC = () => {
 
-    const {getAllPosts} = useAction()
 
-    const posts = useTypedSelector(state => state.post)
+    const {posts} = useTypedSelector(state => state.post)
 
-    const history = useHistory()
+    const [filterType, setFilterType] = useState<string>("titleName")
+
+    const [postList, setPostList] = useState(posts)
+
+    useEffect(() => {
+        setPostList([...posts])
+    }, [posts])
 
     useEffect(() => {
 
-        if (posts.posts.length === 0) {
-            getAllPosts()
+        if (filterType === "date") {
+            setPostList([...posts.sort((a: IPost, b : IPost) => a.date.localeCompare(b.date))])
+        } else if (filterType === "titleName") {
+            setPostList([...posts.sort((a: IPost, b : IPost) => a.title.localeCompare(b.title))])
+        } else if (filterType === "authorName") {
+            setPostList([...posts.sort((a: IPost, b : IPost) => a.author.email.localeCompare(b.author.email))])
         }
 
-
-        console.log(posts)
-    }, [])
+    }, [filterType])
 
     function generateCard(postData: IPost) {
         return (
             <div key={postData.id}>
                 <h1>{postData.title}</h1>
-                <p>{postData.body}</p>
-                <p>{postData.date}</p>
-                <p>{postData.id}</p>
                 <Link to={`/post/${postData.id}`}>Read post</Link>
             </div>
         )
     }
 
     return (
-        <div>
-            {posts.posts.map(post => generateCard(post))}
-        </div>
+        <>
+            <div>
+                <select name="" id="" onChange={(e) => setFilterType(e.target.value)}>
+                    <option value="date">By date</option>
+                    <option value="titleName">By title name</option>
+                    <option value="authorName">By author name</option>
+                </select>
+            </div>
+            <div>
+                {postList.map(post => generateCard(post))}
+            </div>
+        </>
     );
 };
 

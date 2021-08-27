@@ -5,20 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/post.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/redux/types/PostTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/logout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/post.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/utils/renderRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/rootReduser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/rootReduser.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/types/PostTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/types/PostTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Routes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -31,8 +34,8 @@
       <list>
         <option value="SCSS File" />
         <option value="JavaScript File" />
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -117,6 +120,8 @@
       <workItem from="1629794626032" duration="21000000" />
       <workItem from="1629919603938" duration="301000" />
       <workItem from="1629973709219" duration="22944000" />
+      <workItem from="1630049080438" duration="5975000" />
+      <workItem from="1630069279052" duration="19714000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -190,25 +195,21 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/post.controller.js</url>
           <line>34</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
           <line>61</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
           <line>14</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="28" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
           <line>38</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>

@@ -4,6 +4,7 @@ import $api from "../../axios"
 
 import {UserActionType, userTypes} from "../types/UserTypes"
 import {IFetchUser} from "../../interfaces/user"
+import {postTypes} from "../types/PostTypes";
 
 export const userAuth = (email: string, password: string,  setAuthStatus: (status: boolean) => void, type: string) => {
 
@@ -38,7 +39,7 @@ export const cleanErrorMessage = () => {
     return {type: userTypes.CLEAR_ERROR_MESSAGE}
 }
 
-export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
+export const checkAuth = (setAuthStatus: (status: boolean) => void, beforePath: () => void) => {
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
             dispatch({type: userTypes.USER_LOGIN})
@@ -48,7 +49,7 @@ export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
             setAuthStatus(true)
 
             localStorage.setItem("token", fetchData.data.accessToken)
-
+            beforePath()
             dispatch({type: userTypes.USER_FETCH_SUCCESS, payload: {
                     email: fetchData.data.user.email,
                     id: fetchData.data.user.id,
@@ -65,7 +66,7 @@ export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
     }
 }
 
-export const logout = () => {
+export const logout = (clearPostStore:  () => {type: postTypes}) => {
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
 
@@ -76,6 +77,7 @@ export const logout = () => {
             dispatch({
                 type: userTypes.USER_LOGOUT,
             })
+            clearPostStore()
         } catch (e) {
             console.error(e)
         }

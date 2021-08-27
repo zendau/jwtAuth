@@ -4,7 +4,8 @@ export enum postTypes {
     POST_FETCH = "POST_FETCH",
     POST_FETCH_SUCCESS = "POST_FETCH_SUCCESS",
     POST_FETCH_ERROR = "POST_FETCH_ERROR",
-    POSTS_FETCH_SUCCESS = "POSTS_FETCH_SUCCESS"
+    POSTS_FETCH_SUCCESS = "POSTS_FETCH_SUCCESS",
+    CLEAR_POST_STORE = "CLEAR_POST_STORE"
 }
 
 
@@ -35,8 +36,13 @@ interface PostsFetchSuccessAction {
     payload: IPost[]
 }
 
+interface ClearPostStore {
+    type: postTypes.CLEAR_POST_STORE
+}
+
 export type PostActionType =
     PostFetchAction |
     PostFetchSuccessAction |
     PostFetchErrorAction |
-    PostsFetchSuccessAction
+    PostsFetchSuccessAction |
+    ClearPostStore

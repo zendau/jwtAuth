@@ -3,11 +3,12 @@ import {useTypedSelector} from "../hooks/useTypedSelector";
 import {useAction} from "../hooks/useAction";
 import {useAuthContext} from "../context/AuthContext";
 import ErrorMessage from "../components/UI/ErrorMessage";
+import {useHistory} from "react-router-dom";
 
 
 
 
-const Login : React.FC = () => {
+const Login : React.FC = (props) => {
 
     const state = useTypedSelector(state => state.user)
 
@@ -20,12 +21,13 @@ const Login : React.FC = () => {
 
     const {setAuthStatus} =  useAuthContext()
 
+
+
     useEffect(() => {
         console.log("rendered")
     }, [])
 
     const sendLoginData = (type: string) => {
-
         userAuth(email, password, setAuthStatus, type)
 
 

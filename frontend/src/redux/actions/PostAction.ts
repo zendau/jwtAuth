@@ -3,6 +3,7 @@ import {Dispatch} from "redux";
 
 import $api from "../../axios"
 import {IPost} from "../../interfaces/post"
+import {userTypes} from "../types/UserTypes";
 
 export const createPost = (title: string, body: string, author: string) => {
     return async  (dispatch: Dispatch<PostActionType>) => {
@@ -38,7 +39,7 @@ export const getAllUserPosts = () => {
 
 }
 
-export const getAllPosts = () => {
+export const getAllPosts = (path: string, history :  any) => {
     return async  (dispatch: Dispatch<PostActionType>) => {
         try {
             dispatch({type: postTypes.POST_FETCH})
@@ -46,8 +47,14 @@ export const getAllPosts = () => {
             const postData = await $api.get<IPost[]>("/post/getAllPosts")
 
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data})
+
+            history.push(path)
         }catch (e) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
     }
+}
+
+export const clearPostStore = () => {
+    return {type: postTypes.CLEAR_POST_STORE}
 }

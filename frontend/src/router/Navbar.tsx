@@ -1,7 +1,5 @@
 import React from 'react';
-import {useAuthContext} from "../context/AuthContext";
 import {NavLink} from "react-router-dom";
-import {useAction} from "../hooks/useAction";
 
 interface INavPaths {
     to: string
@@ -13,38 +11,23 @@ interface INavbarProps {
 }
 
 
-function createNavElement(path: INavPaths, logout: () => void) {
-    if (path.to === "/logout") {
-        return (
-            <li key={path.to}>
-                <NavLink to={path.to} onClick={logout}>{path.name}</NavLink>
-            </li>
-        )
-    } else {
+function createNavElement(path: INavPaths) {
         return (
             <li key={path.to}>
                 <NavLink to={path.to} >{path.name}</NavLink>
             </li>
         )
-    }
+
 }
 
 const Navbar : React.FC<INavbarProps> = ({paths}) => {
 
-    const {authStatus, setAuthStatus} = useAuthContext()
 
-    const {logout : logoutUser} = useAction()
-
-    const logout = () => {
-        logoutUser()
-        setAuthStatus(false)
-
-    }
 
     return (
         <nav>
             <ul>
-                {paths.map(path => createNavElement(path, logout))}
+                {paths.map(path => createNavElement(path))}
             </ul>
         </nav>
     );

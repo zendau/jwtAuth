@@ -31,6 +31,13 @@ export default function reducer (state = initState, action : PostActionType) : P
                 posts: [...state.posts, ...action.payload]
             }
 
+        case postTypes.CLEAR_POST_STORE:
+            return  {
+                posts: [],
+                isLoaded: false,
+                error: ""
+            }
+
         default:
             return state
     }
