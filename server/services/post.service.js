@@ -53,7 +53,9 @@ class PostService {
             throw ApiError.BadRequest("[DELETE OPERATION] - Post not found")
         }
 
-        return postData;
+        const postDto = this.postDtoFromPopulate(postData)
+
+        return postDto
     }
 
     async getOne(id) {

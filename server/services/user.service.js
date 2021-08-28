@@ -73,7 +73,10 @@ class UserService {
 
     async getAllUsers() {
         const users = await userModel.find();
-        return users;
+
+        const userDto = users.map(user => new UserDto(user))
+
+        return userDto;
     }
 
     async logout(token) {

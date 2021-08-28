@@ -3,6 +3,7 @@ import {FormEvent, useState} from "react";
 import React from 'react';
 import {useAction} from "../../hooks/useAction";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {useHistory} from "react-router-dom";
 
 const CreatePost : React.FC = () => {
 
@@ -11,16 +12,20 @@ const CreatePost : React.FC = () => {
 
     const {createPost} = useAction()
 
-    const {id} = useTypedSelector(state => state.user)
+    const {id, isActivate} = useTypedSelector(state => state.user)
+
+
+    const history = useHistory()
 
     const sendPostData = (e: FormEvent) => {
         e.preventDefault()
-        createPost(title, body, id)
+        createPost(title, body, id, history)
 
     }
 
     return (
         <div>
+            {isActivate ? "" : <h1>Account is not activated</h1>}
             <form>
                 <input
                     type="text"

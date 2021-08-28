@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {useTypedSelector} from "../hooks/useTypedSelector"
 import {useAction} from "../hooks/useAction"
+import {Link} from "react-router-dom"
 
 
 const Account: React.FC = () => {
@@ -22,13 +23,19 @@ const Account: React.FC = () => {
     }
 
 
+    console.log(state.users)
     return (
         <div>
             <h1>Hello {state.email}</h1>
             <h3>Your account is {state.isActivate ? "activated": "not activated"}</h3>
+            <Link to={`/user/${state.id}`}>Get only your posts</Link>
             <button onClick={getUsers}>Get all users</button>
             {state.users ? state.users.map((user, index) =>
-                <div key={user.email}>{index+1} - {user.email}</div>
+                <Link
+                    key={user.email}
+                    to={`/user/${user.id}`}
+                    >{index+1} - {user.email}
+                </Link>
             ) : loadMessage}
         </div>
     )

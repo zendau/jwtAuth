@@ -6,6 +6,9 @@ import ReadPost from "../pages/post/readPost";
 import Post from "../pages/post/post";
 import {ITypeRoutes} from "../interfaces/router";
 import Logout from "../pages/logout";
+import UserPosts from "../pages/userPosts";
+import EditPost from "../pages/post/editPost";
+import DeletePost from "../pages/post/deletePost";
 
 
 export const postRoutes : ITypeRoutes[] = [
@@ -17,7 +20,14 @@ export const postRoutes : ITypeRoutes[] = [
     },
     {
         path: "/post/:id", component: ReadPost, exact: true
-    }]
+    },
+    {
+        path: "/post/edit/:id", component: EditPost, exact: true
+    },
+    {
+        path: "/post/delete/:id", component: DeletePost, exact: true
+    }
+    ]
 
 
 export const privateRoutes : ITypeRoutes[] = [
@@ -29,6 +39,9 @@ export const privateRoutes : ITypeRoutes[] = [
     },
     {
         path: "/post", component: Post, exact: false
+    },
+    {
+        path: "/user/:userId", component: UserPosts, exact: true
     }
 
 ]

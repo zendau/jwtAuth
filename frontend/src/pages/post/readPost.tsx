@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import {useParams} from "react-router";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {IPost} from "../../interfaces/post";
+import {Link} from "react-router-dom"
 
 interface IParams {
     id: string
@@ -20,12 +21,15 @@ const ReadPost : React.FC = () => {
     const [post, setPost] = useState<IPost>()
 
     const {posts} = useTypedSelector(state => state.post)
+    const {id: userID} = useTypedSelector(state => state.user)
 
     useEffect(() => {
         const data = posts.filter((post) =>  post.id === id)[0]
         setPost(data)
 
     }, [posts])
+
+    const checkStatus = useMemo(() => userID === post?.author.id, [post, userID])
 
     return (
         <>
@@ -39,6 +43,14 @@ const ReadPost : React.FC = () => {
                     <p>Created - {convertDate(post.date)}</p>
                     <p>Author - {post.author.email}</p>
                 </div>
+            }
+            {
+                checkStatus ?
+                    <>
+                        <Link to={"/post/edit/"+post?.id}>Edit</Link>
+                        <Link to={"/post/delete/"+post?.id}>Delete</Link>
+                    </> :
+                    ""
             }
         </>
     );

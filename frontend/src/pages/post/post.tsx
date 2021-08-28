@@ -28,7 +28,7 @@ const Post : React.FC = () => {
         }
 
 
-    }, [])
+    }, [posts.posts])
 
     return (
         <>

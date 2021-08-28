@@ -28,7 +28,7 @@ export default function reducer (state = initState, action : PostActionType) : P
         case postTypes.POSTS_FETCH_SUCCESS:
             return  {
                 isLoaded: false,
-                posts: [...state.posts, ...action.payload]
+                posts: [...action.payload]
             }
 
         case postTypes.CLEAR_POST_STORE:
