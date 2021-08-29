@@ -67,6 +67,18 @@ class PostController {
             next(e)
         }
     }
+
+    async getLimitPosts(req, res, next) {
+        try {
+            const {currentPage, limit} = req.query
+            const data = await PostService.getLimitPosts(currentPage, limit)
+
+            res.json(data)
+
+        } catch (e) {
+            next(e)
+        }
+    }
 }
 
 module.exports = new PostController()

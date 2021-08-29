@@ -89,6 +89,55 @@ class PostService {
         return postsDto
     }
 
+    async getLimitPosts(currentPage, limit) {
+        const posts = await postModel.find().populate("author")
+
+        const countPosts = posts.length
+
+        const pages = Math.floor(countPosts / limit)
+
+        if (currentPage > pages) {
+            if (currentPage - 1 === pages) {
+
+                if (limit === 0 || limit > countPosts) {
+
+                    const postsDto = await this.getAllPosts()
+
+                    return { nextPage: false, post: postsDto}
+
+                }
+
+                const pagesRemainder = countPosts - (pages*limit)
+                const postsOnPage = posts.splice(countPosts-pagesRemainder)
+
+                const postsDto = postsOnPage.map(post => this.postDtoFromPopulate(post))
+                return { nextPage: false, post: postsDto}
+
+            } else {
+                throw ApiError.BadRequest("PAGE OUT OF RANGE")
+            }
+        } else {
+
+            if (parseInt(limit) === 0 || limit > countPosts) {
+
+                const postsDto = await this.getAllPosts()
+
+                return { nextPage: false, post: postsDto}
+
+            }
+
+            const postsOnPage = posts.splice(currentPage, limit)
+
+            const postsDto = postsOnPage.map(post => this.postDtoFromPopulate(post))
+            return { nextPage: true, post: postsDto}
+        }
+
+
+
+
+    }
+
+
     postDtoFromPopulate(postModel) {
         const postDto = new PostDto(postModel)
         const userDto = new UserDto(postModel.author)

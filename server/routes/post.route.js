@@ -10,7 +10,7 @@ router.get("/delete/:id", PostController.delete)
 router.get("/get/:id", PostController.getOne)
 router.get("/getUserPosts/:id", PostController.getUserPosts)
 router.get("/getAllPosts", PostController.getAllPosts)
-
+router.get("/getLimitPosts", PostController.getLimitPosts)
 
 
 module.exports = router

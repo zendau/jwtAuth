@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/deletePost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/editPost.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useFetchPosts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/createPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/post.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/services/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/services/user.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/post.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/post.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/post.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="SCSS File" />
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -117,7 +112,8 @@
       <workItem from="1629973709219" duration="22944000" />
       <workItem from="1630049080438" duration="5975000" />
       <workItem from="1630069279052" duration="19714000" />
-      <workItem from="1630123404552" duration="19575000" />
+      <workItem from="1630123404552" duration="19982000" />
+      <workItem from="1630218427607" duration="12853000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -178,7 +174,8 @@
     <MESSAGE value="Add JWT Auto-auth" />
     <MESSAGE value="Fix logout system" />
     <MESSAGE value="Finish develop server post functional. Add create, edit, delete by id, get by id, geUserPosts and getAllPosts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish develop server post functional. Add create, edit, delete by id, get by id, geUserPosts and getAllPosts" />
+    <MESSAGE value="Developed edit and delete selected post. Get selected user posts. Filter by input name." />
+    <option name="LAST_COMMIT_MESSAGE" value="Developed edit and delete selected post. Get selected user posts. Filter by input name." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -195,7 +192,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
-          <line>61</line>
+          <line>63</line>
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -205,9 +202,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/post.controller.js</url>
-          <line>18</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="32" />
+          <line>32</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

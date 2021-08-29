@@ -1,6 +1,8 @@
-import React, {useEffect, useMemo, useState, Suspense} from 'react';
+import React, {useEffect, useMemo, useState, Suspense, useRef, useCallback} from 'react';
 import {IPost} from "../../interfaces/post";
 import {Link} from "react-router-dom";
+
+import "./postList.scss"
 
 interface  IPostListProps {
     posts: IPost[]
@@ -30,15 +32,39 @@ const PostList : React.FC<IPostListProps> = ({posts}) => {
 
     }, [filterType])
 
+
+    const observer = useRef<IntersectionObserver>()
+    const lastBookElementRef = useCallback(node => {
+        if (observer.current) observer.current.disconnect()
+        observer.current = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+                console.log("ENTER")
+                //setPageNumber(prevPageNumber => prevPageNumber + 1)
+            }
+            console.log(entries)
+        })
+        console.log(node)
+        if (node) observer.current.observe(node)
+    }, [])
+
+
     const filterPostsByName = useMemo(() =>  postList.filter(post => post.title.includes(filterName)), [filterName, postList])
 
-    function generateCard(postData: IPost) {
-        return (
-            <div key={postData.id}>
+    function generateCard(postData: IPost, isLast: boolean) {
+
+        if (isLast) {
+            return (
+                <div ref={lastBookElementRef} key={postData.id} className={"post-list"}>
+                    <h1>{postData.title}</h1>
+                    <Link to={`/post/${postData.id}`}>Read post</Link>
+                </div>)
+        } else {
+            return (<div  key={postData.id} className={"post-list"}>
                 <h1>{postData.title}</h1>
                 <Link to={`/post/${postData.id}`}>Read post</Link>
-            </div>
-        )
+            </div>)
+        }
+
     }
 
     return (
@@ -54,7 +80,10 @@ const PostList : React.FC<IPostListProps> = ({posts}) => {
 
                     <input type="text" value={filterName} onChange={(e) => setFilterName(e.target.value)} />
                     <div>
-                        {filterPostsByName.map(post => generateCard(post))}
+                        {filterPostsByName.map((post,index) =>
+                            filterPostsByName.length === index + 1 ? generateCard(post, true)
+                            : generateCard(post, false)
+                        )}
                     </div>
                 </>
                 :

@@ -101,6 +101,21 @@ export const getAllPosts = (path: string, history :  any) => {
     }
 }
 
+export const getLimitPosts = (currentPage: number, limit: number) => {
+    return async  (dispatch: Dispatch<PostActionType>) => {
+        try {
+            dispatch({type: postTypes.POST_FETCH})
+
+            const postData = await $api.get<IPost[]>("/post/getAllPosts")
+
+            dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data})
+
+        }catch (e) {
+            dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
+        }
+    }
+}
+
 export const clearPostStore = () => {
     return {type: postTypes.CLEAR_POST_STORE}
 }
