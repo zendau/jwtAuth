@@ -5,6 +5,7 @@ const uuid = require("uuid")
 
 const UserDto = require("../dtos/user.dto")
 const TokenService = require("../services/token.service")
+const ConfirmCodeService = require("../services/confirmCode.service")
 
 class UserService {
 
@@ -92,8 +93,70 @@ class UserService {
         }
 
         return res
+    }
+
+    async updateUserData(userId, newEmail) {
+        const user = await userModel.findById(userId)
+
+        if (!user) {
+            throw ApiError.BadRequest(`Not found user with id - ${userId}`)
+        }
+
+        const checkEmail = await userModel.findOne({email: newEmail})
+
+
+        if (!checkEmail) {
+
+            const res = await ConfirmCodeService.createCode(userId)
+
+            return res
+
+        } else {
+            throw ApiError.BadRequest(`Email - ${newEmail} is already used`)
+        }
+
+
 
     }
+
+    async saveNewUserData (userId, code, newEmail, newPassword) {
+
+        const checkCodeValue = await ConfirmCodeService.checkCode(code)
+
+        if (!checkCodeValue) {
+            throw ApiError.BadRequest(`Wrong code`)
+        }
+
+
+        const user = await userModel.findById(userId)
+
+        if (!user) {
+            throw ApiError.BadRequest(`Not found user with id - ${userId}`)
+        } else {
+            const activateLink = uuid.v4()
+
+            const hashNewPass = await bcrypt.hash(newPassword, parseInt(process.env.BCRYPT_SALT))
+
+            user.email = newEmail
+            user.password = hashNewPass
+            user.isActivated = false
+            user.activationLink = activateLink
+
+            const userModel = await user.save()
+            const userDto = new UserDto(userModel)
+
+            await ConfirmCodeService.deleteCode(code)
+
+            const tokens = TokenService.generateTokens(userDto)
+            await TokenService.saveToken(userDto.id, tokens.refreshToken)
+
+            return {...tokens, userDto}
+        }
+
+
+
+    }
+
 
 }
 

@@ -10,6 +10,9 @@ router.get("/refresh", UserController.refresh)
 router.get("/all", authMiddleware, UserController.allUsers)
 router.get("/logout", UserController.logoutUser)
 
+router.post("/update", UserController.update)
+router.put("/saveNewData", UserController.saveNewUserData)
+
 
 
 module.exports = router

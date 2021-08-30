@@ -65,6 +65,26 @@ class UserController {
         }
     }
 
+    async update(req, res, next) {
+        try {
+            const {userId, newEmail} = req.body
+            const codeModel = await UserService.updateUserData(userId, newEmail)
+            return res.json(codeModel)
+        }catch (e) {
+            next(e)
+        }
+    }
+
+    async saveNewUserData(req, res, next) {
+        try {
+            const {userId, code,  newEmail, newPassword} = req.body
+            const newUserData = await UserService.saveNewUserData(userId, code, newEmail, newPassword)
+            return res.json(newUserData)
+        }catch (e) {
+            next(e)
+        }
+    }
+
 }
 
 module.exports = new UserController()
