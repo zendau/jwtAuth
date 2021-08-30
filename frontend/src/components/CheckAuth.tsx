@@ -10,17 +10,15 @@ const CheckAuth : React.FC = ({children}) => {
 
     const {checkAuth} = useAction()
 
-    const {setAuthStatus} =  useAuthContext()
+    const {authStatus, setAuthStatus} =  useAuthContext()
 
     const history = createBrowserHistory()
-
 
     function beforePath() {
         history.push(history.location.pathname)
     }
 
     useEffect(() => {
-        console.log(history)
         if (localStorage.getItem('token')) {
             checkAuth(setAuthStatus, beforePath)
         }

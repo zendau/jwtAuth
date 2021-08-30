@@ -126,7 +126,7 @@ class PostService {
 
             }
 
-            const postsOnPage = posts.splice(currentPage, limit)
+            const postsOnPage = posts.splice((currentPage-1)*limit, limit)
 
             const postsDto = postsOnPage.map(post => this.postDtoFromPopulate(post))
             return { nextPage: true, post: postsDto}

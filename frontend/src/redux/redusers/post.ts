@@ -3,7 +3,8 @@ import {PostActionType, PostState, postTypes} from "../types/PostTypes";
 const initState : PostState = {
     posts: [],
     isLoaded: false,
-    error: ""
+    error: "",
+    hasMore: true
 }
 
 export default function reducer (state = initState, action : PostActionType) : PostState {
@@ -27,15 +28,23 @@ export default function reducer (state = initState, action : PostActionType) : P
 
         case postTypes.POSTS_FETCH_SUCCESS:
             return  {
+                ...state,
                 isLoaded: false,
-                posts: [...action.payload]
+                posts: [...state.posts, ...action.payload]
             }
 
         case postTypes.CLEAR_POST_STORE:
             return  {
                 posts: [],
                 isLoaded: false,
-                error: ""
+                error: "",
+                hasMore: true
+            }
+
+        case postTypes.SET_HAS_MORE:
+            return  {
+                ...state,
+                hasMore: action.payload
             }
 
         default:

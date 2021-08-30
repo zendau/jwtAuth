@@ -5,13 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/useFetchPosts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/context/PageContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/hooks/usePostObserver.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/fetchPosts.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useFetchPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useFetchPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/post.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/post.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/post.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/post.route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/redux/types/PostTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/types/PostTypes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +123,8 @@
       <workItem from="1630049080438" duration="5975000" />
       <workItem from="1630069279052" duration="19714000" />
       <workItem from="1630123404552" duration="19982000" />
-      <workItem from="1630218427607" duration="12853000" />
+      <workItem from="1630218427607" duration="16916000" />
+      <workItem from="1630297020046" duration="24492000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -150,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629999410432</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="developed API for limited fetch posts">
+      <created>1630263948057</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1630263948060</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +193,8 @@
     <MESSAGE value="Fix logout system" />
     <MESSAGE value="Finish develop server post functional. Add create, edit, delete by id, get by id, geUserPosts and getAllPosts" />
     <MESSAGE value="Developed edit and delete selected post. Get selected user posts. Filter by input name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed edit and delete selected post. Get selected user posts. Filter by input name." />
+    <MESSAGE value="developed API for limited fetch posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="developed API for limited fetch posts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -186,11 +205,6 @@
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/post.controller.js</url>
-          <line>34</line>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
           <line>63</line>
           <option name="timeStamp" value="27" />
@@ -199,11 +213,6 @@
           <url>file://$PROJECT_DIR$/server/services/post.service.js</url>
           <line>38</line>
           <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/server/controllers/post.controller.js</url>
-          <line>32</line>
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

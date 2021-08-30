@@ -3,7 +3,10 @@ import {Dispatch} from "redux";
 
 import $api from "../../axios"
 import {IPost} from "../../interfaces/post"
-import { History } from 'history';
+import {History} from 'history';
+import IFetchPosts from "../../interfaces/fetchPosts";
+import {useContext} from "react";
+import {PageContext} from "../../context/PageContext";
 
 export const createPost = (title: string, body: string, author: string, history: History) => {
     return async  (dispatch: Dispatch<PostActionType>) => {
@@ -42,7 +45,6 @@ export const editPost = (postId: string, userId: string, title: string, body: st
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: posts})
             // history.push(postData.data.id)
         }catch (e) {
-            console.log("ERROR", e)
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
 
@@ -64,7 +66,6 @@ export const deletePost = (postId: string, posts: IPost[]) => {
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: posts})
             // history.push(postData.data.id)
         }catch (e) {
-            console.log("ERROR", e)
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
     }
@@ -106,9 +107,15 @@ export const getLimitPosts = (currentPage: number, limit: number) => {
         try {
             dispatch({type: postTypes.POST_FETCH})
 
-            const postData = await $api.get<IPost[]>("/post/getAllPosts")
+            const postData = await $api.get<IFetchPosts>("/post/getLimitPosts", {
+                params: {
+                    currentPage,
+                    limit
+                }
+            })
 
-            dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data})
+            dispatch({type: postTypes.SET_HAS_MORE, payload: postData.data.nextPage})
+            dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data.post})
 
         }catch (e) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
@@ -117,5 +124,6 @@ export const getLimitPosts = (currentPage: number, limit: number) => {
 }
 
 export const clearPostStore = () => {
+
     return {type: postTypes.CLEAR_POST_STORE}
 }

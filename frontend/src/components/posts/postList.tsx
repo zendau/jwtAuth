@@ -1,23 +1,28 @@
-import React, {useEffect, useMemo, useState, Suspense, useRef, useCallback} from 'react';
+import React, {useEffect, useMemo, useState, Suspense, useRef, useCallback, useContext} from 'react';
 import {IPost} from "../../interfaces/post";
 import {Link} from "react-router-dom";
 
 import "./postList.scss"
+import {PageContext} from "../../context/PageContext";
+import {useTypedSelector} from "../../hooks/useTypedSelector";
+import {useFetchPosts} from "../../hooks/useFetchPosts";
+import {usePostObserver} from "../../hooks/usePostObserver";
 
-interface  IPostListProps {
-    posts: IPost[]
-}
 
-const PostList : React.FC<IPostListProps> = ({posts}) => {
+const PostList : React.FC = () => {
 
+    const {posts, hasMore} = useTypedSelector(state => state.post)
 
     const [filterType, setFilterType] = useState<string>("titleName")
     const [filterName, setFilterName] = useState<string>("")
 
-    const [postList, setPostList] = useState(posts)
+    const [postList, setPostList] = useState<IPost[]>([])
+
+    const {pageNumber, setPageNumber, limit} = useContext(PageContext)
+
 
     useEffect(() => {
-        setPostList([...posts])
+        setPostList(posts)
     }, [posts])
 
     useEffect(() => {
@@ -33,40 +38,35 @@ const PostList : React.FC<IPostListProps> = ({posts}) => {
     }, [filterType])
 
 
-    const observer = useRef<IntersectionObserver>()
-    const lastBookElementRef = useCallback(node => {
-        if (observer.current) observer.current.disconnect()
-        observer.current = new IntersectionObserver(entries => {
-            if (entries[0].isIntersecting) {
-                console.log("ENTER")
-                //setPageNumber(prevPageNumber => prevPageNumber + 1)
-            }
-            console.log(entries)
-        })
-        console.log(node)
-        if (node) observer.current.observe(node)
-    }, [])
+
+    useFetchPosts(pageNumber, limit)
+
+    const observerCallback = usePostObserver(setPageNumber, hasMore)
 
 
-    const filterPostsByName = useMemo(() =>  postList.filter(post => post.title.includes(filterName)), [filterName, postList])
+    const filterPostsByName = useMemo(
+        () => postList.filter(post => post.title.includes(filterName)),
+        [filterName, postList])
 
     function generateCard(postData: IPost, isLast: boolean) {
 
         if (isLast) {
             return (
-                <div ref={lastBookElementRef} key={postData.id} className={"post-list"}>
+                <div ref={observerCallback} key={postData.id} className={"post-list"}>
                     <h1>{postData.title}</h1>
+                    <p>{postData.author.email}</p>
                     <Link to={`/post/${postData.id}`}>Read post</Link>
                 </div>)
         } else {
-            return (<div  key={postData.id} className={"post-list"}>
-                <h1>{postData.title}</h1>
-                <Link to={`/post/${postData.id}`}>Read post</Link>
-            </div>)
+            return (
+                <div  key={postData.id} className={"post-list"}>
+                    <h1>{postData.title}</h1>
+                    <p>{postData.author.email}</p>
+                    <Link to={`/post/${postData.id}`}>Read post</Link>
+                </div>)
         }
 
     }
-
     return (
         <Suspense fallback={"WAIT"}>
             {filterPostsByName.length !== 0 ?
