@@ -68,8 +68,8 @@ class UserController {
     async update(req, res, next) {
         try {
             const {userId, newEmail} = req.body
-            const codeModel = await UserService.updateUserData(userId, newEmail)
-            return res.json(codeModel)
+            await UserService.updateUserData(userId, newEmail)
+            return res.send("OK")
         }catch (e) {
             next(e)
         }

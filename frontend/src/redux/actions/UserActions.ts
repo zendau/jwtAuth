@@ -97,3 +97,29 @@ export const getAllUsers = () => {
         }
     }
 }
+
+
+
+export const userDataUpdateRequest = (userId : string, newEmail: string) => {
+    return async (dispatch: Dispatch<UserActionType>) => {
+        try {
+            const fetchData = await $api.post(`/user/update`, {
+                userId, newEmail
+            })
+
+            if (fetchData.data !== "OK") {
+                throw new Error("Wrong userDataUpdateRequest")
+            }
+
+            dispatch({
+                type: userTypes.CHANGE_REQUEST,
+                payload: true
+            })
+        } catch (e) {
+            dispatch({
+                type: userTypes.USER_FETCH_ERROR,
+                payload: e.response.data.message
+            })
+        }
+    }
+}

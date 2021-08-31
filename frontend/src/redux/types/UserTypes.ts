@@ -7,7 +7,8 @@ export enum userTypes {
     USER_FETCH_ERROR="USER_FETCH_ERROR",
     USER_LOGOUT="USER_LOGOUT",
     CLEAR_ERROR_MESSAGE="CLEAR_ERROR_MESSAGE",
-    GET_ALL_USERS="GET_ALL_USERS"
+    GET_ALL_USERS="GET_ALL_USERS",
+    CHANGE_REQUEST="CHANGE_REQUEST"
 }
 
 
@@ -19,6 +20,7 @@ export interface UserState {
     isLoaded?: boolean
     error?: string | null
     users?: IUser[]
+    confirmCode?: boolean
 }
 
 interface UserLoginAction {
@@ -48,10 +50,16 @@ interface ClearErrorMessageAction {
     type: userTypes.CLEAR_ERROR_MESSAGE
 }
 
-interface GetAllUsers {
+interface GetAllUsersAction {
     type: userTypes.GET_ALL_USERS
     payload: IUser[]
 }
+
+interface ConfirmCodeAction {
+    type: userTypes.CHANGE_REQUEST,
+    payload: boolean
+}
+
 
 export type UserActionType =
     UserLoginAction |
@@ -60,4 +68,5 @@ export type UserActionType =
     UserFetchErrorAction |
     UserLogoutAction |
     ClearErrorMessageAction |
-    GetAllUsers
+    GetAllUsersAction |
+    ConfirmCodeAction

@@ -5,7 +5,8 @@ const initState : UserState = {
     email: "",
     isActivate: false,
     isLoaded : false,
-    error: ""
+    error: "",
+    confirmCode: false
 
 }
 
@@ -29,7 +30,7 @@ export default function reducer (state = initState, action : UserActionType) : U
 
         case userTypes.USER_FETCH_ERROR:
             return {
-                email: "", isActivate: false, id: "", isLoaded: false, error: action.payload
+                ...state, error: action.payload
             }
 
         case userTypes.USER_LOGOUT:
@@ -45,6 +46,11 @@ export default function reducer (state = initState, action : UserActionType) : U
         case userTypes.GET_ALL_USERS:
             return {
                 ...state, users: action.payload
+            }
+
+        case userTypes.CHANGE_REQUEST:
+            return {
+                ...state, confirmCode: action.payload
             }
 
         default:

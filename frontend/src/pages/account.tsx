@@ -2,6 +2,8 @@ import React, {useEffect, useState} from 'react'
 import {useTypedSelector} from "../hooks/useTypedSelector"
 import {useAction} from "../hooks/useAction"
 import {Link} from "react-router-dom"
+import ChangeUserData from "../components/account/changeUserData";
+import ConfirmUpdateData from "../components/account/confirmUpdateData";
 
 
 const Account: React.FC = () => {
@@ -37,6 +39,8 @@ const Account: React.FC = () => {
                     >{index+1} - {user.email}
                 </Link>
             ) : loadMessage}
+            <ChangeUserData/>
+            <ConfirmUpdateData/>
         </div>
     )
 }
