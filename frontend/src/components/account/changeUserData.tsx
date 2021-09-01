@@ -1,6 +1,7 @@
 import React, {FormEvent, useEffect, useState} from 'react';
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useAction} from "../../hooks/useAction";
+import {useChangeUserDataContext} from "../../context/ChangeUserDataContext";
 
 const ChangeUserData : React.FC = () => {
 
@@ -14,9 +15,13 @@ const ChangeUserData : React.FC = () => {
 
     const {userDataUpdateRequest} = useAction()
 
+    const {setNewEmail, newPassword, setNewPassword} = useChangeUserDataContext()
+
+
     function sendReqToUpdateData(event: FormEvent) {
         event.preventDefault()
         userDataUpdateRequest(id, userEmail)
+        setNewEmail(userEmail)
     }
 
     return (
@@ -25,7 +30,7 @@ const ChangeUserData : React.FC = () => {
             <h2>{error}</h2>
             <form>
                 <input type="text" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
-                <input type="text" placeholder="new password" />
+                <input type="text" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} placeholder="new password" />
                 <input type="button" onClick={sendReqToUpdateData} value="send data" />
             </form>
             

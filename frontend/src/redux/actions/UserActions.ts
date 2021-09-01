@@ -123,3 +123,32 @@ export const userDataUpdateRequest = (userId : string, newEmail: string) => {
         }
     }
 }
+
+export const SendCodeForUpdateRequest = (userId : string, newEmail: string, newPassword: string, code: string) => {
+    return async (dispatch: Dispatch<UserActionType>) => {
+        try {
+            const fetchData = await $api.put(`/user/saveNewData`, {
+                userId, code, newEmail, newPassword
+            })
+
+            localStorage.setItem("token", fetchData.data.accessToken)
+
+
+            dispatch({type: userTypes.USER_FETCH_SUCCESS, payload: {
+                    email: fetchData.data.userDto.email,
+                    id: fetchData.data.userDto.id,
+                    isActivate: fetchData.data.userDto.isActivated
+                }})
+
+            dispatch({
+                type: userTypes.CHANGE_REQUEST,
+                payload: true
+            })
+        } catch (e) {
+            dispatch({
+                type: userTypes.USER_FETCH_ERROR,
+                payload: e.response.data.message
+            })
+        }
+    }
+}

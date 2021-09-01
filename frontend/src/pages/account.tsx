@@ -4,6 +4,7 @@ import {useAction} from "../hooks/useAction"
 import {Link} from "react-router-dom"
 import ChangeUserData from "../components/account/changeUserData";
 import ConfirmUpdateData from "../components/account/confirmUpdateData";
+import {ChangeUserDataContext} from "../context/ChangeUserDataContext"
 
 
 const Account: React.FC = () => {
@@ -24,10 +25,11 @@ const Account: React.FC = () => {
         setLoadMessage("Wait, users are download")
     }
 
-
-    console.log(state.users)
+    const [newEmail, setNewEmail] = useState("")
+    const [newPassword, setNewPassword] = useState("")
+    
     return (
-        <div>
+        <ChangeUserDataContext.Provider value={{newEmail, setNewEmail, newPassword, setNewPassword}}>
             <h1>Hello {state.email}</h1>
             <h3>Your account is {state.isActivate ? "activated": "not activated"}</h3>
             <Link to={`/user/${state.id}`}>Get only your posts</Link>
@@ -36,12 +38,13 @@ const Account: React.FC = () => {
                 <Link
                     key={user.email}
                     to={`/user/${user.id}`}
-                    >{index+1} - {user.email}
+                >{index+1} - {user.email}
                 </Link>
             ) : loadMessage}
             <ChangeUserData/>
             <ConfirmUpdateData/>
-        </div>
+        </ChangeUserDataContext.Provider>
+
     )
 }
 

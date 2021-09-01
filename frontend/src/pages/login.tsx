@@ -29,9 +29,6 @@ const Login : React.FC = (props) => {
 
     const sendLoginData = (type: string) => {
         userAuth(email, password, setAuthStatus, type)
-
-
-
     }
 
     return (
