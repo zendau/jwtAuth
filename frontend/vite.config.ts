@@ -6,5 +6,5 @@ export default defineConfig({
   plugins: [reactRefresh()],
   server: {
     host: "0.0.0.0"
-  }
+  },
 })
