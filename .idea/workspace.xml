@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/env.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/axios/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/axios/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/vite-env.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +51,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\JwtAuth\frontend" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\post" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages" />
       <recent name="E:\Projects\JwtAuth\frontend\src\redux" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:front">
+  <component name="RunManager" selected="npm.start:server">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -112,6 +119,8 @@
       <workItem from="1630517466213" duration="6949000" />
       <workItem from="1630864091256" duration="178000" />
       <workItem from="1630865704920" duration="653000" />
+      <workItem from="1630871587960" duration="340000" />
+      <workItem from="1630953219695" duration="6595000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -183,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630525699303</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="init docker and docker-compose">
+      <created>1630871827451</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1630871827451</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +229,8 @@
     <MESSAGE value="Server update user email and password with confirm code" />
     <MESSAGE value="started development of components for changing user data" />
     <MESSAGE value="Developed logic for code confirm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Developed logic for code confirm" />
+    <MESSAGE value="init docker and docker-compose" />
+    <option name="LAST_COMMIT_MESSAGE" value="init docker and docker-compose" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
