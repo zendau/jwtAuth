@@ -79,6 +79,7 @@ class UserController {
         try {
             const {userId, code,  newEmail, newPassword} = req.body
             const newUserData = await UserService.saveNewUserData(userId, code, newEmail, newPassword)
+            res.cookie('JWTRefreshToken', newUserData.refreshToken, {maxAge: 30 * 24 * 60 * 60 * 1000, httpOnly: true})
             return res.json(newUserData)
         }catch (e) {
             next(e)
