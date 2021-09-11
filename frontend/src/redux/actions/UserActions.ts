@@ -39,17 +39,20 @@ export const cleanErrorMessage = () => {
     return {type: userTypes.CLEAR_ERROR_MESSAGE}
 }
 
-export const checkAuth = (setAuthStatus: (status: boolean) => void, beforePath: () => void) => {
+export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
             dispatch({type: userTypes.USER_LOGIN})
 
             const fetchData = await $api.get(`/user/refresh`)
 
+            if (fetchData.data.errors) {
+                throw new Error(fetchData.data.message)
+            }
+
             setAuthStatus(true)
 
             localStorage.setItem("token", fetchData.data.accessToken)
-            beforePath()
             dispatch({type: userTypes.USER_FETCH_SUCCESS, payload: {
                     email: fetchData.data.user.email,
                     id: fetchData.data.user.id,
@@ -58,9 +61,9 @@ export const checkAuth = (setAuthStatus: (status: boolean) => void, beforePath: 
 
 
         }catch (e) {
+
             dispatch({
-                type: userTypes.USER_FETCH_ERROR,
-                payload: e.response.data.message
+                type: userTypes.USER_LOGOUT
             })
         }
     }

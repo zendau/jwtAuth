@@ -1,0 +1,23 @@
+.users {
+  &-container {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    list-style: none;
+  }
+}
+
+.user {
+  display: flex;
+
+  font-size: 18px;
+
+  &__email {
+    margin-left: 15px;
+    margin-bottom: 10px;
+    color: $font-color;
+  }
+}

@@ -30,7 +30,7 @@ export default function reducer (state = initState, action : UserActionType) : U
 
         case userTypes.USER_FETCH_ERROR:
             return {
-                ...state, error: action.payload
+                ...state, error: action.payload, isLoaded: false
             }
 
         case userTypes.USER_LOGOUT:

@@ -14,6 +14,7 @@ interface IRouterSwitchProps {
 
 const RouterSwitch : React.FC<IRouterSwitchProps> = ({redirect, typeRoutes, paths}) => {
 
+    console.log()
 
     return (
         <>
@@ -22,8 +23,8 @@ const RouterSwitch : React.FC<IRouterSwitchProps> = ({redirect, typeRoutes, path
                 {
                     typeRoutes.map(route => renderRoute(route))
                 }
+                <Redirect exact from="/" to={redirect} />
                 <Route path="*" component={NotFound} />
-
             </Switch>
         </>
 
