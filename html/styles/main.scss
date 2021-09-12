@@ -6,6 +6,8 @@
 @import "navbar";
 @import "filter";
 @import "createPost";
+@import "account";
+@import "auth";
 
 // users page
 @import "users";
@@ -21,6 +23,10 @@
 
 body {
   background-color: #f4f4f4;
+}
+
+input, textarea {
+  border: 1px solid #cbccce;
 }
 
 .posts-container {
@@ -88,8 +94,8 @@ body {
     opacity: 1;
   }
   100% {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 72px;
     height: 72px;
     opacity: 0;
@@ -162,3 +168,49 @@ body {
   }
 }
 
+.error-message {
+  margin-top: 15px;
+  min-height: 40px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 3%;
+  line-height: 40px;
+  background-color: #d30027;
+  display: none;
+
+}
+
+.error-message--active {
+  display: block;
+}
+
+.textInput {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+
+  input {
+    box-sizing: border-box;
+    height: 48px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    padding: 12px 24px 4px 12px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  p {
+    margin-top: 5px;
+  }
+
+  p.letters {
+    color: #1c1c1c;
+  }
+
+  label {
+    margin-top: 5px;
+    margin-bottom: 2px;
+  }
+}

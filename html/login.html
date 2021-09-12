@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="navbar__container">
+            <div class="navbar__item navbar__item--active">
+                <a href="#">Login</a>
+            </div>
+            <div class="navbar__item">
+                <a href="#">Register</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<section class="auth-container">
+    <div class="auth__wrapper">
+
+        <div class="auth__form-container">
+
+            <p class="error-message error-message--active">Error message</p>
+
+            <form>
+                <div class="textInput">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Email">
+                    <p class="letters"><span>30</span> Characters remaining</p>
+                </div>
+
+                <div class="textInput">
+                    <label for="pass">Password</label>
+                    <input type="text" id="pass" placeholder="Password">
+                    <p class="letters"><span>30</span> Characters remaining</p>
+                </div>
+
+                <input type="button" class="btn auth__btn" value="Login">
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!--    <div class="loader">-->
+<!--        <div class="lds-ripple"><div></div><div></div></div>-->
+<!--    </div>-->
+
+</body>
+</html>

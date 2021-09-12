@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="add styles for pages : posts, createPost and users">
-      <change afterPath="$PROJECT_DIR$/html/createPost.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/createPost.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/filter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/navbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/post.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/users.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/users.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/styles/account.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/styles/auth.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/axios/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/axios/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/redusers/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/redusers/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +68,7 @@
       <recent name="E:\Projects\JwtAuth\frontend\src\redux" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:server">
+  <component name="RunManager" selected="npm.start:front">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -145,7 +137,8 @@
       <workItem from="1631290232852" duration="1602000" />
       <workItem from="1631292294339" duration="671000" />
       <workItem from="1631294303132" duration="1202000" />
-      <workItem from="1631345151124" duration="24662000" />
+      <workItem from="1631345151124" duration="25288000" />
+      <workItem from="1631423114345" duration="14262000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -231,7 +224,14 @@
       <option name="project" value="LOCAL" />
       <updated>1630961293317</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add styles for pages : posts, createPost and users">
+      <created>1631391016446</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1631391016448</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
