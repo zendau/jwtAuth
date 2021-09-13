@@ -1,18 +1,11 @@
 import React from 'react';
 import "./loader.scss"
 
-interface  ILoaderProps {
-    status: boolean | undefined
-}
-
-const Loader : React.FC<ILoaderProps> = ({status,children}) => {
+const Loader : React.FC = () => {
     return (
-        <>
-            <div className="overflow" style={ status ? {display: "block"} : {display: "none"}}>
-                <h1 className="loader">Происходит загрузка</h1>
-            </div>
-            {children}
-        </>
+        <div className="loader">
+            <div className="lds-ripple"><div></div><div></div></div>
+        </div>
     )
 }
 

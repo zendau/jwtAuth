@@ -6,7 +6,6 @@ import {useAction} from "../../hooks/useAction";
 const ConfirmUpdateData = () => {
 
     const {confirmCode, id} = useTypedSelector(state => state.user)
-    console.log(confirmCode)
 
     const {newPassword, newEmail} = useChangeUserDataContext()
 

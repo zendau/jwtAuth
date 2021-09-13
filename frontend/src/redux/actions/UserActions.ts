@@ -59,7 +59,6 @@ export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
                     isActivate: fetchData.data.user.isActivated
                 }})
 
-
         }catch (e) {
 
             dispatch({

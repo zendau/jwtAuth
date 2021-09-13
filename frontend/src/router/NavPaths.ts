@@ -5,8 +5,12 @@ interface IPath {
 
 export const publicPaths : IPath[] = [
     {
-        to: "/login", name: "Login"
+        to: "/login", name: "Login",
+    },
+    {
+        to: "/register", name: "Register"
     }
+
 ]
 
 export const privatePaths : IPath[] = [

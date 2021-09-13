@@ -6,7 +6,7 @@ const initState : UserState = {
     isActivate: false,
     isLoaded : false,
     error: "",
-    confirmCode: false
+    confirmCode: false,
 
 }
 
@@ -14,18 +14,18 @@ export default function reducer (state = initState, action : UserActionType) : U
     switch (action.type) {
         case userTypes.USER_LOGIN:
             return  {
-                isLoaded: true, error: null, email: "", isActivate: false, id: ""
+                ...state, isLoaded: true, error: null, email: "", isActivate: false, id: ""
             }
 
 
         case userTypes.USER_REGISTER:
             return  {
-                isLoaded: true, error: null, email: "", isActivate: false, id: ""
+                ...state, isLoaded: true, error: null, email: "", isActivate: false, id: ""
             }
 
         case userTypes.USER_FETCH_SUCCESS:
             return  {
-                ...action.payload, isLoaded: false
+                ...state, ...action.payload, isLoaded: false
             }
 
         case userTypes.USER_FETCH_ERROR:
@@ -35,7 +35,7 @@ export default function reducer (state = initState, action : UserActionType) : U
 
         case userTypes.USER_LOGOUT:
             return {
-                email: "", isActivate: false, id: "", isLoaded: false
+                ...state, email: "", isActivate: false, id: "", isLoaded: false
             }
 
         case userTypes.CLEAR_ERROR_MESSAGE:
@@ -52,6 +52,7 @@ export default function reducer (state = initState, action : UserActionType) : U
             return {
                 ...state, confirmCode: action.payload
             }
+
 
         default:
             return state

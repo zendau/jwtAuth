@@ -1,6 +1,9 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 
+import "./Navbar.scss"
+
+
 interface INavPaths {
     to: string
     name: string
@@ -12,24 +15,25 @@ interface INavbarProps {
 
 
 function createNavElement(path: INavPaths) {
+
         return (
-            <li key={path.to}>
-                <NavLink to={path.to} >{path.name}</NavLink>
-            </li>
+            <div key={path.to}>
+                <NavLink className="navbar__item" activeClassName="navbar__item--active" to={path.to} >{path.name}</NavLink>
+            </div>
         )
 
 }
 
 const Navbar : React.FC<INavbarProps> = ({paths}) => {
 
-
-
     return (
-        <nav>
-            <ul>
-                {paths.map(path => createNavElement(path))}
-            </ul>
-        </nav>
+        <header>
+            <nav className="navbar">
+                <div className="navbar__container">
+                    {paths.map(path => createNavElement(path))}
+                </div>
+            </nav>
+        </header>
     );
 };
 

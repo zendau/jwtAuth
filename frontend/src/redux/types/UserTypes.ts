@@ -8,7 +8,7 @@ export enum userTypes {
     USER_LOGOUT="USER_LOGOUT",
     CLEAR_ERROR_MESSAGE="CLEAR_ERROR_MESSAGE",
     GET_ALL_USERS="GET_ALL_USERS",
-    CHANGE_REQUEST="CHANGE_REQUEST"
+    CHANGE_REQUEST="CHANGE_REQUEST",
 }
 
 
@@ -59,6 +59,8 @@ interface ConfirmCodeAction {
     type: userTypes.CHANGE_REQUEST,
     payload: boolean
 }
+
+
 
 
 export type UserActionType =

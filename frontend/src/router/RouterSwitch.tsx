@@ -14,7 +14,6 @@ interface IRouterSwitchProps {
 
 const RouterSwitch : React.FC<IRouterSwitchProps> = ({redirect, typeRoutes, paths}) => {
 
-    console.log()
 
     return (
         <>

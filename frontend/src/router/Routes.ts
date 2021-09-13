@@ -1,5 +1,5 @@
 import Account from "../pages/account"
-import Login from "../pages/login"
+import Login from "../pages/auth/login"
 import CreatePost from "../pages/post/createPost";
 import AllPosts from "../pages/post/allPosts";
 import ReadPost from "../pages/post/readPost";
@@ -9,6 +9,7 @@ import Logout from "../pages/logout";
 import UserPosts from "../pages/userPosts";
 import EditPost from "../pages/post/editPost";
 import DeletePost from "../pages/post/deletePost";
+import Register from "../pages/auth/register";
 
 
 export const postRoutes : ITypeRoutes[] = [
@@ -49,5 +50,8 @@ export const privateRoutes : ITypeRoutes[] = [
 export const publicRoutes : ITypeRoutes[] = [
     {
         path: "/login", component: Login, exact: true
+    },
+    {
+        path: "/register", component: Register, exact: true
     }
 ]

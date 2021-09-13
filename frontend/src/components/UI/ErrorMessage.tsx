@@ -22,7 +22,7 @@ const ErrorMessage : React.FC<IErrorMessageProps> = ({message, timeout}) => {
     }, [message])
 
     return (
-        <h1 style={ message ? {display: "block"} : {display: "none"}}>{message}</h1>
+        <p className={ message ? "error-message error-message--active" : "error-message"}>Error message</p>
     );
 };
 

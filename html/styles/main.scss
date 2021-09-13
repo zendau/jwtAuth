@@ -5,8 +5,14 @@
 @import "post";
 @import "navbar";
 @import "filter";
+
+//create post page
 @import "createPost";
+
+// account page
 @import "account";
+
+// auth and register pages
 @import "auth";
 
 // users page
