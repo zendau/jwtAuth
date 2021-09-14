@@ -10,14 +10,15 @@ interface IRouterSwitchProps {
     typeRoutes: ITypeRoutes[]
     redirect: string
     paths: INavPaths[]
+    privateType: boolean
 }
 
-const RouterSwitch : React.FC<IRouterSwitchProps> = ({redirect, typeRoutes, paths}) => {
+const RouterSwitch : React.FC<IRouterSwitchProps> = ({redirect, typeRoutes, paths, privateType}) => {
 
 
     return (
         <>
-            <Navbar paths={paths} />
+            <Navbar paths={paths} privateType={privateType} />
             <Switch>
                 {
                     typeRoutes.map(route => renderRoute(route))

@@ -1,0 +1,49 @@
+import React, {useEffect, useState} from 'react'
+import {useTypedSelector} from "../../hooks/useTypedSelector"
+import {useAction} from "../../hooks/useAction"
+import {Link} from "react-router-dom"
+import ChangeUserData from "../../components/account/changeUserData";
+import ConfirmUpdateData from "../../components/account/confirmUpdateData";
+import {ChangeUserDataContext} from "../../context/ChangeUserDataContext"
+
+import "./account.scss"
+
+const Account: React.FC = () => {
+
+    const state = useTypedSelector(state => state.user)
+
+    const [loadMessage, setLoadMessage] = useState("")
+
+
+    const {getAllUsers} = useAction()
+
+    useEffect(() => {
+        setLoadMessage("")
+    }, [state.users])
+
+    function getUsers() {
+        getAllUsers()
+        setLoadMessage("Wait, users are download")
+    }
+
+    const [newEmail, setNewEmail] = useState("")
+    const [newPassword, setNewPassword] = useState("")
+    
+    return (
+        <ChangeUserDataContext.Provider value={{newEmail, setNewEmail, newPassword, setNewPassword}}>
+
+            <section className="account-container">
+                <div className="account__wrapper">
+                    <h1 className="account__title">{state.email}'s account</h1>
+                    <h2 className="account__status">Your account is {state.isActivate ? "activated": "not activated"}</h2>
+                    <Link className="btn account__get-posts" to={`/user/${state.id}`}>Get only your posts</Link>
+                    <ChangeUserData/>
+                    <ConfirmUpdateData/>
+                </div>
+            </section>
+        </ChangeUserDataContext.Provider>
+
+    )
+}
+
+export default Account;

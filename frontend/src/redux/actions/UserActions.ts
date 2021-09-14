@@ -6,7 +6,7 @@ import {UserActionType, userTypes} from "../types/UserTypes"
 import {IFetchUser} from "../../interfaces/user"
 import {postTypes} from "../types/PostTypes";
 
-export const userAuth = (email: string, password: string,  setAuthStatus: (status: boolean) => void, type: string) => {
+export const userAuth = (email: string, password: string,  setAuthStatus: (status: boolean) => void, type: string, route:  {(path: string, state?: unknown): void}) => {
 
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
@@ -25,6 +25,8 @@ export const userAuth = (email: string, password: string,  setAuthStatus: (statu
                     id: userData.data.userDto.id,
                     isActivate: userData.data.userDto.isActivated
                 }})
+
+            route("/account")
 
         } catch (e) {
             dispatch({

@@ -16,8 +16,6 @@ const CheckAuth : React.FC = ({children}) => {
         if (localStorage.getItem('token')) {
             checkAuth(setAuthStatus)
         }
-
-
     }, [])
 
 

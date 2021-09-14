@@ -1,6 +1,6 @@
-import Account from "../pages/account"
+import Account from "../pages/account/account"
 import Login from "../pages/auth/login"
-import CreatePost from "../pages/post/createPost";
+import CreatePost from "../pages/post/createPost/createPost";
 import AllPosts from "../pages/post/allPosts";
 import ReadPost from "../pages/post/readPost";
 import Post from "../pages/post/post";
@@ -10,6 +10,7 @@ import UserPosts from "../pages/userPosts";
 import EditPost from "../pages/post/editPost";
 import DeletePost from "../pages/post/deletePost";
 import Register from "../pages/auth/register";
+import Users from "../pages/users/users";
 
 
 export const postRoutes : ITypeRoutes[] = [
@@ -43,6 +44,9 @@ export const privateRoutes : ITypeRoutes[] = [
     },
     {
         path: "/user/:userId", component: UserPosts, exact: true
+    },
+    {
+        path: "/users", component: Users, exact: true
     }
 
 ]

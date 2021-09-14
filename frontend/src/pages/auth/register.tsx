@@ -36,6 +36,7 @@ const Register : React.FC = () => {
                     <ErrorMessage message={state.error} timeout={5000} />
                     <form>
                         <TextInput
+                            type="text"
                             title="Email"
                             id="email"
                             letters={30}
@@ -43,6 +44,7 @@ const Register : React.FC = () => {
                             setValue={setEmail}
                         />
                         <TextInput
+                            type="password"
                             title="Password"
                             id="pass"
                             letters={30}
@@ -51,6 +53,7 @@ const Register : React.FC = () => {
                         />
 
                         <TextInput
+                            type="password"
                             title="Confirm password"
                             id="confirmPass"
                             letters={30}

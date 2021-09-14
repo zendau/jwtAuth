@@ -7,6 +7,8 @@ import {PageContext} from "../../context/PageContext";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useFetchPosts} from "../../hooks/useFetchPosts";
 import {usePostObserver} from "../../hooks/usePostObserver";
+import Filter from "./filter";
+import FetchLoader from "../UI/fetchLoader";
 
 
 const PostList : React.FC = () => {
@@ -50,44 +52,55 @@ const PostList : React.FC = () => {
 
     function generateCard(postData: IPost, isLast: boolean) {
 
+
+
+
         if (isLast) {
             return (
-                <div ref={observerCallback} key={postData.id} className={"post-list"}>
-                    <h1>{postData.title}</h1>
-                    <p>{postData.author.email}</p>
-                    <Link to={`/post/${postData.id}`}>Read post</Link>
+                <div ref={observerCallback} key={postData.id} className="post">
+                    <div className="post__header">
+                        <h2 className="post__title">{postData.title}</h2>
+                        <p className="post__body">{postData.author.email}</p>
+                    </div>
+                    <div className="post__footer">
+                        <Link to={`/post/${postData.id}`} className="btn post__btn">Read post</Link>
+                        <p className="post__author">{postData.author.email}</p>
+                    </div>
                 </div>)
         } else {
             return (
-                <div  key={postData.id} className={"post-list"}>
-                    <h1>{postData.title}</h1>
-                    <p>{postData.author.email}</p>
-                    <Link to={`/post/${postData.id}`}>Read post</Link>
+                <div key={postData.id} className="post">
+                    <div className="post__header">
+                        <h2 className="post__title">{postData.title}</h2>
+                        <p className="post__body">{postData.author.email}</p>
+                    </div>
+                    <div className="post__footer">
+                        <Link to={`/post/${postData.id}`} className="btn post__btn">Read post</Link>
+                        <p className="post__author">{postData.author.email}</p>
+                    </div>
                 </div>)
         }
 
     }
     return (
-        <Suspense fallback={"WAIT"}>
+        <Suspense fallback={<FetchLoader/>}>
+            <Filter
+                filterType={filterType}
+                setFilterType={setFilterType}
+                filterName={filterName}
+                setFilterName={setFilterName}
+            />
             {filterPostsByName.length !== 0 ?
                 <>
-
-                    <select name="" id="" onChange={(e) => setFilterType(e.target.value)}>
-                        <option value="date">By date</option>
-                        <option value="titleName">By title name</option>
-                        <option value="authorName">By author name</option>
-                    </select>
-
-                    <input type="text" value={filterName} onChange={(e) => setFilterName(e.target.value)} />
-                    <div>
+                    <section className="posts-container">
                         {filterPostsByName.map((post,index) =>
                             filterPostsByName.length === index + 1 ? generateCard(post, true)
                             : generateCard(post, false)
                         )}
-                    </div>
+                    </section>
                 </>
                 :
-                <h1>Not have posts</h1>
+                <h1 className="message-info">No have posts</h1>
             }
 
         </Suspense>

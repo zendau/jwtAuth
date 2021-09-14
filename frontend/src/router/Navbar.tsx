@@ -11,20 +11,19 @@ interface INavPaths {
 
 interface INavbarProps {
     paths: INavPaths[]
+    privateType: boolean
 }
 
 
 function createNavElement(path: INavPaths) {
 
         return (
-            <div key={path.to}>
-                <NavLink className="navbar__item" activeClassName="navbar__item--active" to={path.to} >{path.name}</NavLink>
-            </div>
+                <NavLink key={path.to} className="navbar__item" activeClassName="navbar__item--active" to={path.to} >{path.name}</NavLink>
         )
 
 }
 
-const Navbar : React.FC<INavbarProps> = ({paths}) => {
+const Navbar : React.FC<INavbarProps> = ({paths, privateType}) => {
 
     return (
         <header>
@@ -32,6 +31,8 @@ const Navbar : React.FC<INavbarProps> = ({paths}) => {
                 <div className="navbar__container">
                     {paths.map(path => createNavElement(path))}
                 </div>
+                {privateType ? <NavLink className="navbar__item" activeClassName="navbar__item--active" to="/logout" >Exit</NavLink> : ""}
+
             </nav>
         </header>
     );

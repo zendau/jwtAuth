@@ -6,6 +6,7 @@ import ErrorMessage from "../../components/UI/ErrorMessage";
 
 import "./auth.scss"
 import TextInput from "../../components/UI/textInput";
+import {useHistory} from "react-router-dom";
 
 
 
@@ -22,10 +23,11 @@ const Login : React.FC = () => {
 
     const {setAuthStatus} =  useAuthContext()
 
+    const {push} = useHistory()
 
 
     const sendLoginData = (type: string) => {
-        userAuth(email, password, setAuthStatus, type)
+        userAuth(email, password, setAuthStatus, type, push)
     }
 
     return (
@@ -35,6 +37,7 @@ const Login : React.FC = () => {
                     <ErrorMessage message={state.error} timeout={5000} />
                     <form>
                         <TextInput
+                            type="text"
                             title="Email"
                             id="email"
                             letters={30}
@@ -42,6 +45,7 @@ const Login : React.FC = () => {
                             setValue={setEmail}
                         />
                         <TextInput
+                             type="password"
                              title="Password"
                              id="pass"
                              letters={30}

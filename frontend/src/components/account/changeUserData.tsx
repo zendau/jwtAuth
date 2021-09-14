@@ -2,6 +2,7 @@ import React, {FormEvent, useEffect, useState} from 'react';
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useAction} from "../../hooks/useAction";
 import {useChangeUserDataContext} from "../../context/ChangeUserDataContext";
+import ErrorMessage from "../UI/ErrorMessage";
 
 const ChangeUserData : React.FC = () => {
 
@@ -25,16 +26,32 @@ const ChangeUserData : React.FC = () => {
     }
 
     return (
-        <div>
-            <h1>Change user email and password</h1>
-            <h2>{error}</h2>
+
+        <div className="account__change-data-container">
+
+            <h2 className="account__title">Change user email and password</h2>
+
+            <ErrorMessage message={error} timeout={5000}/>
+
             <form>
-                <input type="text" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
-                <input type="text" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} placeholder="new password" />
-                <input type="button" onClick={sendReqToUpdateData} value="send data" />
+                <div className="textInput">
+                    <label htmlFor="newEmail">Email</label>
+                    <input type="text" id="newEmail" placeholder="Email" value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
+                    <p className="letters"><span>30</span> Characters remaining</p>
+                </div>
+
+                <div className="textInput">
+                    <label htmlFor="newPass">Password</label>
+                    <input type="text" id="newPass" placeholder="Password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)}/>
+                    <p className="letters"><span>30</span> Characters remaining</p>
+                </div>
+
+                <input type="button" className="btn account__btn" onClick={sendReqToUpdateData} value="Change user data"/>
+
             </form>
-            
+
         </div>
+
     );
 };
 

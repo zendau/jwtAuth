@@ -13,6 +13,7 @@ const Logout : React.FC = () => {
     const {logout : logoutUser, clearPostStore} = useAction()
 
     useEffect(() => {
+        console.log("test")
         logoutUser(clearPostStore)
         setAuthStatus(false)
         history.push("/")
