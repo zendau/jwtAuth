@@ -2,35 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <title>Title</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 <header>
     <nav class="navbar">
-        <div class="navbar__container">
-            <div class="navbar__item navbar__item--active">
-                <a href="#">Account</a>
+        <div class="navbar__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="navbar__items">
+            <div class="navbar__container">
+                <div class="navbar__item navbar__item--active">
+                    <a href="#">Account</a>
+                </div>
+                <div class="navbar__item">
+                    <a href="#">Posts</a>
+                </div>
+                <div class="navbar__item">
+                    <a href="#">Create post</a>
+                </div>
+                <div class="navbar__item">
+                    <a href="#">Users</a>
+                </div>
             </div>
             <div class="navbar__item">
-                <a href="#">Posts</a>
-            </div>
-            <div class="navbar__item">
-                <a href="#">Create post</a>
-            </div>
-            <div class="navbar__item">
-                <a href="#">Users</a>
+                <a href="#">Exit</a>
             </div>
         </div>
-        <div class="navbar__item">
-            <a href="#">Exit</a>
-        </div>
+
     </nav>
 </header>
-
 <section class="account-container">
     <div class="account__wrapper">
-        <h1 class="account__title">Admin's account</h1>
+        <h1 class="account__main-title">Admin's account</h1>
         <h2 class="account__status">Your account is not activated</h2>
         <a class="btn account__get-posts" href="#">Get only your posts</a>
 

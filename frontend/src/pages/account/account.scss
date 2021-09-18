@@ -16,9 +16,25 @@
     align-items: center;
   }
 
-  &__title, &__status {
+  &__main-title, &__title, &__status {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: #000;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      box-shadow: 2px 2px 12px 4px rgb(0 0 0 / 5%);
+      opacity: 0.3;
+    }
   }
 
   &__get-posts {
@@ -46,19 +62,6 @@
       flex-direction: column;
     }
 
-    &:after {
-      content: "";
-      display: block;
-      width: 100%;
-      height: 1px;
-      background-color: #000;
-      position: absolute;
-      top: 35px;
-      left: 0;
-      box-shadow: 2px 2px 12px 4px rgb(0 0 0 / 5%);
-      opacity: 0.3;
-    }
-
   }
   &__btn {
     background-color: #ff4500!important;
@@ -78,3 +81,20 @@
 
 
 }
+
+@media (max-width: 720px) {
+
+  .account {
+    &__main-title, &__title, &__status {
+      font-size: 30px;
+    }
+
+    input {
+      font-size: 18px;
+    }
+
+  }
+
+
+}
+

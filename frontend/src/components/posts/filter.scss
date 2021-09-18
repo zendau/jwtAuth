@@ -66,3 +66,21 @@
   }
 
 }
+
+@media (max-width: 720px) {
+
+  .filter-container {
+    margin-right: 10px;
+  }
+
+  .filter__search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter__show, .filter-container, .filter-container input, .filter-container select {
+    font-size: 18px!important;
+  }
+
+}

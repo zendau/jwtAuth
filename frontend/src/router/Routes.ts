@@ -2,7 +2,7 @@ import Account from "../pages/account/account"
 import Login from "../pages/auth/login"
 import CreatePost from "../pages/post/createPost/createPost";
 import AllPosts from "../pages/post/allPosts";
-import ReadPost from "../pages/post/readPost";
+import ReadPost from "../pages/post/readPost/readPost";
 import Post from "../pages/post/post";
 import {ITypeRoutes} from "../interfaces/router";
 import Logout from "../pages/logout";

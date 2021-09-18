@@ -1,3 +1,8 @@
+.posts__title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 .post {
 
   width: 600px;
@@ -31,6 +36,39 @@
   }
 
   &__author {
+
+  }
+}
+
+@media (max-width: 720px) {
+
+  .posts__title {
+    font-size: 30px;
+  }
+
+  .post {
+    width: 100%;
+    min-height: 200px;
+    height: 100%;
+
+    &__title {
+      font-size: 26px;
+    }
+
+    &__body {
+      font-size: 18px;
+      min-height: 75%;
+    }
+
+    &__footer {
+      height: 25%;
+    }
+
+    &__btn {
+      font-size: 20px!important;
+      height: 38px!important;
+      margin: 5px;
+    }
 
   }
 }

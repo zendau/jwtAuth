@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useAction} from "../../hooks/useAction";
 
 interface IErrorMessageProps {
-    message: string | null | undefined
+    message: string | false | undefined  | null
     timeout: number
 }
 

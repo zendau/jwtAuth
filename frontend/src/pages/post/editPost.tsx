@@ -4,6 +4,8 @@ import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useAction} from "../../hooks/useAction";
 import {Link, Redirect} from "react-router-dom";
 
+import "./createPost/createPost.scss"
+
 interface IParams {
     id: string
 }
@@ -50,16 +52,23 @@ const EditPost : React.FC = () => {
     return (
         <>
             <form>
-                <input
-                    type="text"
-                    value={title}
-                    onChange={e => setTitle(e.target.value)}
-                />
-                <textarea
-                    value={body}
-                    onChange={e => setBody(e.target.value)}
-                />
-                <button onClick={sendPostData}>Edit post</button>
+                <section className="create-post-container">
+                    <form className="create-post__wrapper">
+                        <input className="create-post__title"
+                               placeholder="Title"
+                               type="text"
+                               value={title}
+                               onChange={e => setTitle(e.target.value)} />
+                            <textarea
+                                className="create-post__body"
+                                placeholder="Text"
+                                value={body}
+                                onChange={e => setBody(e.target.value)}>
+                                Post text
+                            </textarea>
+                            <button className="btn create-post__create" onClick={sendPostData}>Edit post</button>
+                    </form>
+                </section>
             </form>
             {
                 checkStatus ?

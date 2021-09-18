@@ -28,6 +28,8 @@ input, textarea {
 }
 
 .btn {
+  display: block;
+  text-decoration: none;
   border-radius: 5%;
   width: 150px;
   border: none;
@@ -36,6 +38,8 @@ input, textarea {
   color: #4A403A;
   font-size: 16px;
   cursor: pointer;
+  text-align: center;
+  line-height: 29px;
 }
 
 .message-info {

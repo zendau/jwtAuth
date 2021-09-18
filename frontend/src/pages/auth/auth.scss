@@ -5,9 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 15%;
     margin-bottom: 30px;
-    height: 70vh;
   }
 
   &__wrapper {
@@ -40,5 +39,13 @@
     &:hover {
       opacity: .8;
     }
+  }
+}
+
+@media (max-width: 720px) {
+  .auth {
+    &-container {
+      margin-top: 10%;
+      }
   }
 }

@@ -4,40 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="add styles for pages : account, register and login">
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/fetchLoader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/fetchLoader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/posts/filter.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/posts/filter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/account/account.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost/createPost.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/users/users.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/users/users.tsx" afterDir="false" />
+    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="responsive design for all pages. Add pages: readPost and editPost">
+      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/formikElements.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost/readPost.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost/readPost.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/editPost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/readPost.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/styles/readPost.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/CheckAuth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/UI/ErrorMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI/ErrorMessage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/UI/textInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI/textInput.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/account/changeUserData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/account/changeUserData.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/account/confirmUpdateData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/account/confirmUpdateData.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account/account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/account/account.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account/account.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/account/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account/account.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/auth.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/logout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/logout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/createPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost/createPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/createPost/createPost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost/createPost.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/editPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/editPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/users/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/users/users.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/AppRouter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/NavPaths.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/router/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/createPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/createPost.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/account.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/account.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/auth.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/createPost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/createPost.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/filter.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/navbar.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/post.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/styles/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/users.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/users.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,9 +58,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="TypeScript File" />
         <option value="HTML File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
         <option value="SCSS File" />
       </list>
     </option>
@@ -83,7 +93,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend/src/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/styles" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
@@ -92,19 +102,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\JwtAuth\html\styles" />
+      <recent name="E:\Projects\JwtAuth\html" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages" />
       <recent name="E:\Projects\JwtAuth\frontend\src\styles" />
-      <recent name="E:\Projects\JwtAuth\html" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\JwtAuth\frontend\src\pages\post" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\post\createPost" />
+      <recent name="E:\Projects\JwtAuth\frontend\src\pages\post\readPost" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\account" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\users" />
-      <recent name="E:\Projects\JwtAuth\frontend\src\pages\auth" />
-      <recent name="E:\Projects\JwtAuth\frontend\src\pages\login" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:server">
+  <component name="RunManager" selected="npm.start:front">
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -177,7 +188,11 @@
       <workItem from="1631423114345" duration="21312000" />
       <workItem from="1631509627980" duration="2859000" />
       <workItem from="1631552022765" duration="9839000" />
-      <workItem from="1631630452255" duration="15090000" />
+      <workItem from="1631630452255" duration="17398000" />
+      <workItem from="1631714991774" duration="2180000" />
+      <workItem from="1631812657521" duration="9884000" />
+      <workItem from="1631893657264" duration="4197000" />
+      <workItem from="1631951058310" duration="25489000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -277,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631467223330</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary=" styles for components account, allPosts, creatPost. Create page Users. Create fetchLoader and styles for error message. Repair redirect after auth">
+      <created>1631649118824</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1631649118825</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -311,7 +333,9 @@
     <MESSAGE value="fix confirmCode component" />
     <MESSAGE value="add styles for pages : posts, createPost and users" />
     <MESSAGE value="add styles for pages : account, register and login" />
-    <option name="LAST_COMMIT_MESSAGE" value="add styles for pages : account, register and login" />
+    <MESSAGE value=" styles for components account, allPosts, creatPost. Create page Users. Create fetchLoader and styles for error message. Repair redirect after auth" />
+    <MESSAGE value="responsive design for all pages. Add pages: readPost and editPost" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive design for all pages. Add pages: readPost and editPost" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

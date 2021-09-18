@@ -4,6 +4,12 @@
     justify-content: center;
     margin-top: 25px;
   }
+
+  &__not-active {
+    text-align: center;
+    margin-top: 15%;
+  }
+
   &__wrapper {
     width: 600px;
     display: flex;
@@ -34,9 +40,18 @@
     width: 250px!important;
     height: 50px!important;
   }
+}
 
-  &__not-active {
-    text-align: center;
-    margin-top: 30%;
+@media (max-width: 720px) {
+
+  .create-post {
+    &__title, &__body {
+      font-size: 18px;
+    }
+
+    &__create {
+      font-size: 20px!important;
+    }
   }
+
 }

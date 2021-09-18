@@ -60,6 +60,7 @@ const PostList : React.FC = () => {
                 <div ref={observerCallback} key={postData.id} className="post">
                     <div className="post__header">
                         <h2 className="post__title">{postData.title}</h2>
+                        <small>{postData.date}</small>
                         <p className="post__body">{postData.author.email}</p>
                     </div>
                     <div className="post__footer">
@@ -72,6 +73,7 @@ const PostList : React.FC = () => {
                 <div key={postData.id} className="post">
                     <div className="post__header">
                         <h2 className="post__title">{postData.title}</h2>
+                        <small>{postData.date}</small>
                         <p className="post__body">{postData.author.email}</p>
                     </div>
                     <div className="post__footer">
@@ -93,6 +95,7 @@ const PostList : React.FC = () => {
             {filterPostsByName.length !== 0 ?
                 <>
                     <section className="posts-container">
+                        <h1 className="posts__title">Admin's posts</h1>
                         {filterPostsByName.map((post,index) =>
                             filterPostsByName.length === index + 1 ? generateCard(post, true)
                             : generateCard(post, false)

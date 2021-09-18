@@ -34,7 +34,7 @@ const Account: React.FC = () => {
 
             <section className="account-container">
                 <div className="account__wrapper">
-                    <h1 className="account__title">{state.email}'s account</h1>
+                    <h1 className="account__main-title">{state.email}'s account</h1>
                     <h2 className="account__status">Your account is {state.isActivate ? "activated": "not activated"}</h2>
                     <Link className="btn account__get-posts" to={`/user/${state.id}`}>Get only your posts</Link>
                     <ChangeUserData/>

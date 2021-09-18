@@ -12,8 +12,8 @@ const Main: React.FC = () => {
 
     return (
         state.isLoaded === true ?
-        <Loader status={state.isLoaded}/> :
-        <Login/>
+            <Loader/>  :
+            <Login/>
     )
 }
 
