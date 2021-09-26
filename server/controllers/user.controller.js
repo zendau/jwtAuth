@@ -3,12 +3,10 @@ const UserService = require("../services/user.service")
 class UserController {
 
     async registration(req, res, next) {
-
-
+        console.log("test222222")
         try {
             const {email, password} = req.body
             const data = await UserService.registration(email, password)
-
             res.cookie("JWTRefreshToken", data.refreshToken, {httpOnly: true, maxAge: 30*24*60*60*1000})
             res.json(data)
         }catch (e) {

@@ -30,11 +30,11 @@ const Users : React.FC = () => {
                             >{user.email}
                             </Link>
                         </li>
-                    ) : <FetchLoader/>}
+                    ) : <h1 className="message-info">No have users</h1>}
                 </ul>
             </section>
 
-            <h1 className="message-info">No have users</h1>
+
         </>
 
     );

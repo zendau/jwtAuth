@@ -5,49 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="responsive design for all pages. Add pages: readPost and editPost">
-      <change afterPath="$PROJECT_DIR$/frontend/src/interfaces/formikElements.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost/readPost.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost/readPost.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/editPost.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/readPost.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/styles/readPost.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UI/ErrorMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI/ErrorMessage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/UI/textInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI/textInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/account/changeUserData.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/account/changeUserData.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/main/main.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/filter.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/account/account.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account/account.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/account/account.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/account/account.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/auth.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/auth/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/auth/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/createPost/createPost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/createPost/createPost.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/editPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/editPost.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/readPost.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/users/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/users/users.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/createPost.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/createPost.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/posts.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/account.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/account.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/auth.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/auth.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/createPost.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/createPost.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/filter.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/navbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/navbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/post.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/post.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/users.scss" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/users.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/readPost/readPost.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/readPost/readPost.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/users/users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/users/users.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/post.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/dtos/user.dto.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/dtos/user.dto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +41,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -81,6 +65,18 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/frontend/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/controllers/post.controller.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/dtos/user.dto.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/components/main/main.tsx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/server/dtos/post.dto.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="1wwpRDrmDGaybpaWPNKtso2EDBO" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -91,17 +87,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.17.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/html/styles" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.17.6" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.17.6" />
+    <property name="last_opened_file_path" value="//wsl$/Ubuntu/home/zendau/projects/jwtReact" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
-    <property name="ts.external.directory.path" value="E:\Projects\JwtAuth\frontend\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\projects\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects" />
       <recent name="E:\Projects\JwtAuth\html\styles" />
       <recent name="E:\Projects\JwtAuth\html" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages" />
@@ -116,6 +113,67 @@
     </key>
   </component>
   <component name="RunManager" selected="npm.start:front">
+    <configuration name="docker dev" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="docker-compose.dev.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.dev.yml.mongo-express: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo-express" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.dev.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.dev.yml.mongo: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.dev.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.backend: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="backend" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -147,9 +205,23 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Docker.docker dev" />
+      <item itemvalue="Docker.docker-compose.yml.backend: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.dev.yml.mongo: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.dev.yml.mongo-express: Compose Deployment" />
       <item itemvalue="npm.start:front" />
       <item itemvalue="npm.start:server" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker dev" />
+        <item itemvalue="Docker.docker-compose.dev.yml.mongo: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.dev.yml.mongo-express: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.backend: Compose Deployment" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -193,6 +265,15 @@
       <workItem from="1631812657521" duration="9884000" />
       <workItem from="1631893657264" duration="4197000" />
       <workItem from="1631951058310" duration="25489000" />
+      <workItem from="1632333960147" duration="4031000" />
+      <workItem from="1632384841750" duration="3856000" />
+      <workItem from="1632419211080" duration="6362000" />
+      <workItem from="1632429208893" duration="868000" />
+      <workItem from="1632464775396" duration="3653000" />
+      <workItem from="1632485038261" duration="4123000" />
+      <workItem from="1632490533456" duration="4232000" />
+      <workItem from="1632595117189" duration="5560000" />
+      <workItem from="1632634211846" duration="16277000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -362,8 +443,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
-          <line>79</line>
+          <line>77</line>
           <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/controllers/user.controller.js</url>
+          <line>6</line>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

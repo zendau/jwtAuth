@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {useParams} from "react-router";
 
 import {useTypedSelector} from "../hooks/useTypedSelector";
@@ -20,24 +20,31 @@ const UserPosts : React.FC = () => {
 
     const {userId} = useParams<IParams>()
 
+    const {users} = useTypedSelector(state => state.user)
+
+    const [userName, setUserName] = useState("")
+
     useEffect(() => {
         clearPostStore()
         getAllUserPosts(userId)
+
+        console.log(users)
+
+        const userData = users?.filter(user => user.id === userId)
+
+        if (userData !== undefined) {
+            setUserName(userData[0].email)
+        }
+
         return () => {
             setPageNumber(1)
-            clearPostStore()
         }
     }, [])
-
-    const {posts} = useTypedSelector(state => state.post)
-
-
 
 
     return (
         <>
-            <h1>Posts of user with id - {userId}</h1>
-            <PostList />
+            <PostList author={userName} />
         </>
     );
 };

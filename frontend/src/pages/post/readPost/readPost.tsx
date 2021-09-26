@@ -29,6 +29,7 @@ const ReadPost : React.FC = () => {
 
     useEffect(() => {
         const data = posts.filter((post) =>  post.id === id)[0]
+        console.log(2, data)
         setPost(data)
 
     }, [posts])

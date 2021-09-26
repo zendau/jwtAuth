@@ -4,7 +4,12 @@ import {useAction} from "../../hooks/useAction";
 import {useChangeUserDataContext} from "../../context/ChangeUserDataContext";
 import ErrorMessage from "../UI/ErrorMessage";
 
-const ChangeUserData : React.FC = () => {
+interface IChangeUserData {
+    setStatus: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+
+const ChangeUserData : React.FC<IChangeUserData> = ({setStatus}) => {
 
     const {email, id, error} = useTypedSelector(state => state.user)
 
@@ -23,6 +28,7 @@ const ChangeUserData : React.FC = () => {
         event.preventDefault()
         userDataUpdateRequest(id, userEmail)
         setNewEmail(userEmail)
+        setStatus(false)
     }
 
     return (

@@ -1,17 +1,19 @@
-import React, {useEffect, useMemo, useState, Suspense, useRef, useCallback, useContext} from 'react';
+import React, {useEffect, useMemo, useState, Suspense, useContext} from 'react';
 import {IPost} from "../../interfaces/post";
 import {Link} from "react-router-dom";
 
 import "./postList.scss"
 import {PageContext} from "../../context/PageContext";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
-import {useFetchPosts} from "../../hooks/useFetchPosts";
 import {usePostObserver} from "../../hooks/usePostObserver";
 import Filter from "./filter";
 import FetchLoader from "../UI/fetchLoader";
 
+interface IPostList {
+    author?: string
+}
 
-const PostList : React.FC = () => {
+const PostList : React.FC<IPostList> = ({author}) => {
 
     const {posts, hasMore} = useTypedSelector(state => state.post)
 
@@ -20,7 +22,7 @@ const PostList : React.FC = () => {
 
     const [postList, setPostList] = useState<IPost[]>([])
 
-    const {pageNumber, setPageNumber, limit} = useContext(PageContext)
+    const {setPageNumber} = useContext(PageContext)
 
 
     useEffect(() => {
@@ -41,7 +43,7 @@ const PostList : React.FC = () => {
 
 
 
-    useFetchPosts(pageNumber, limit)
+
 
     const observerCallback = usePostObserver(setPageNumber, hasMore)
 
@@ -51,8 +53,6 @@ const PostList : React.FC = () => {
         [filterName, postList])
 
     function generateCard(postData: IPost, isLast: boolean) {
-
-
 
 
         if (isLast) {
@@ -95,7 +95,7 @@ const PostList : React.FC = () => {
             {filterPostsByName.length !== 0 ?
                 <>
                     <section className="posts-container">
-                        <h1 className="posts__title">Admin's posts</h1>
+                        {author ? <h1 className="posts__title">{author}'s posts</h1> : ""}
                         {filterPostsByName.map((post,index) =>
                             filterPostsByName.length === index + 1 ? generateCard(post, true)
                             : generateCard(post, false)

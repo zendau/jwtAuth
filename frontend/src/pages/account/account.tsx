@@ -28,6 +28,8 @@ const Account: React.FC = () => {
 
     const [newEmail, setNewEmail] = useState("")
     const [newPassword, setNewPassword] = useState("")
+
+    const [changeDataStatus, setChangeDataStatus] = useState(true)
     
     return (
         <ChangeUserDataContext.Provider value={{newEmail, setNewEmail, newPassword, setNewPassword}}>
@@ -37,8 +39,15 @@ const Account: React.FC = () => {
                     <h1 className="account__main-title">{state.email}'s account</h1>
                     <h2 className="account__status">Your account is {state.isActivate ? "activated": "not activated"}</h2>
                     <Link className="btn account__get-posts" to={`/user/${state.id}`}>Get only your posts</Link>
-                    <ChangeUserData/>
-                    <ConfirmUpdateData/>
+
+                    {
+                        changeDataStatus ?
+                            <ChangeUserData setStatus={setChangeDataStatus}/> :
+                            <ConfirmUpdateData/>
+                    }
+
+
+
                 </div>
             </section>
         </ChangeUserDataContext.Provider>

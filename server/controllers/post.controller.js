@@ -4,10 +4,11 @@ class PostController {
 
     async create(req, res, next) {
         try {
+            console.log("test2")
             const {author, title, body} = req.body
             const data = await PostService.create(author, title, body)
-
             res.json(data)
+
 
         } catch (e) {
             next(e)
@@ -16,6 +17,8 @@ class PostController {
 
     async edit(req, res, next) {
         try {
+
+
             const {postId, userId, title, body} = req.body
 
             const data = await PostService.edit(postId, userId, title, body)

@@ -10,10 +10,14 @@ services:
     restart: always # What to do if container crashes
     links:
       - backend
+    volumes:
+      - "./frontend:/app/frontend"
+      - "./frontend/node_modules:/app/frontend/node_modules"
 
   backend:
     # Create backend container  
-    build: ./server
+    build:
+      context: ./server
     ports:
         - "8080:8080"
     container_name: backend-docker
@@ -22,15 +26,15 @@ services:
         - mongo
     environment:
         DB_URL: mongodb://root:example@mongo:27017/
+    volumes:
+      - "./server:/app/server"
+      - "./server/node_modules:/app/server/node_modules"
 
   mongo:
-    image: mongo:4.2.16-rc0-bionic
+    image: mongo
     restart: always
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: example
     ports:
-      - 27017:27017
+      - 27020:27017
     volumes:
       - ./database:/data/db
   mongo-express:

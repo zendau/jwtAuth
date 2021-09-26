@@ -5,6 +5,7 @@ import {useAction} from "../../hooks/useAction";
 import {Link, Redirect} from "react-router-dom";
 
 import "./createPost/createPost.scss"
+import FetchLoader from "../../components/UI/fetchLoader";
 
 interface IParams {
     id: string
@@ -23,18 +24,21 @@ const EditPost : React.FC = () => {
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
 
-    const [authorId, setAuthorId] = useState("")
+    const [isLoaded, setIsLoaded] = useState(true)
+    const [checkStatus, setCheckStatus] = useState(true)
 
     useEffect(() => {
+
         const data = posts.filter((post) =>  post.id === id)[0]
+
 
         if (data !== undefined) {
             setTitle(data.title)
             setBody(data.body)
-
-            setAuthorId(data.author.id)
         }
 
+        setCheckStatus(userId === data?.author.id)
+        setIsLoaded(false)
 
 
     }, [posts])
@@ -47,36 +51,39 @@ const EditPost : React.FC = () => {
     }
 
 
-    const checkStatus = useMemo(() => userId === authorId, [authorId, userId])
 
     return (
-        <>
-            <form>
-                <section className="create-post-container">
-                    <form className="create-post__wrapper">
-                        <input className="create-post__title"
-                               placeholder="Title"
-                               type="text"
-                               value={title}
-                               onChange={e => setTitle(e.target.value)} />
-                            <textarea
-                                className="create-post__body"
-                                placeholder="Text"
-                                value={body}
-                                onChange={e => setBody(e.target.value)}>
-                                Post text
-                            </textarea>
-                            <button className="btn create-post__create" onClick={sendPostData}>Edit post</button>
-                    </form>
-                </section>
-            </form>
-            {
-                checkStatus ?
-                    <>
-                        <p>OK</p>
-                    </> :
-                    <Redirect to={"/post/all"} />
-            }
+        <>{
+            isLoaded ?
+                <FetchLoader/> :
+                <>{
+                    checkStatus ?
+                        <>
+                            <section className="create-post-container">
+                                <form className="create-post__wrapper">
+                                    <input className="create-post__title"
+                                           placeholder="Title"
+                                           type="text"
+                                           value={title}
+                                           onChange={e => setTitle(e.target.value)} />
+                                    <textarea
+                                        className="create-post__body"
+                                        placeholder="Text"
+                                        value={body}
+                                        onChange={e => setBody(e.target.value)}>
+                                        Post text
+                                    </textarea>
+                                    <button className="btn create-post__create" onClick={sendPostData}>Edit post</button>
+                                </form>
+                            </section>
+                        </>
+                        :
+                        <Redirect to={"/post/all"} />
+                }</>
+
+        }
+
+
         </>
     )
 }
