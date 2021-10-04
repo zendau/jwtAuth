@@ -19,7 +19,7 @@ export const createPost = (title: string, body: string, author: string, history:
 
             dispatch({type: postTypes.POST_FETCH_SUCCESS, payload: postData.data})
             history.push(postData.data.id)
-        }catch (e) {
+        }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
 
@@ -44,7 +44,7 @@ export const editPost = (postId: string, userId: string, title: string, body: st
 
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: posts})
             // history.push(postData.data.id)
-        }catch (e) {
+        }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
 
@@ -65,7 +65,7 @@ export const deletePost = (postId: string, posts: IPost[]) => {
 
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: posts})
             // history.push(postData.data.id)
-        }catch (e) {
+        }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
     }
@@ -80,7 +80,7 @@ export const getAllUserPosts = (userId: string) => {
 
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data})
 
-        }catch (e) {
+        }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
     }
@@ -96,7 +96,7 @@ export const getAllPosts = (path: string, history :  any) => {
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data})
 
             history.push(path)
-        }catch (e) {
+        }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
     }
@@ -117,7 +117,7 @@ export const getLimitPosts = (currentPage: number, limit: number) => {
             dispatch({type: postTypes.SET_HAS_MORE, payload: postData.data.nextPage})
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data.post})
 
-        }catch (e) {
+        }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})
         }
     }

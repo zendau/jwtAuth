@@ -37,6 +37,7 @@ const UserPosts : React.FC = () => {
         }
 
         return () => {
+            clearPostStore()
             setPageNumber(1)
         }
     }, [])

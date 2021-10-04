@@ -28,7 +28,7 @@ export const userAuth = (email: string | undefined, password: string | undefined
 
             route("/account")
 
-        } catch (e) {
+        } catch (e: any) {
             dispatch({
                 type: userTypes.USER_FETCH_ERROR,
                 payload: e.response.data.message
@@ -119,7 +119,7 @@ export const userDataUpdateRequest = (userId : string, newEmail: string) => {
                 type: userTypes.CHANGE_REQUEST,
                 payload: true
             })
-        } catch (e) {
+        } catch (e: any) {
             dispatch({
                 type: userTypes.USER_FETCH_ERROR,
                 payload: e.response.data.message
@@ -148,7 +148,7 @@ export const SendCodeForUpdateRequest = (userId : string, newEmail: string, newP
                 type: userTypes.CHANGE_REQUEST,
                 payload: true
             })
-        } catch (e) {
+        } catch (e: any) {
             dispatch({
                 type: userTypes.USER_FETCH_ERROR,
                 payload: e.response.data.message

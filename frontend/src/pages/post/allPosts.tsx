@@ -8,12 +8,6 @@ import {useAction} from "../../hooks/useAction";
 const AllPosts : React.FC = () => {
 
     const {pageNumber, limit} = useContext(PageContext)
-    const {clearPostStore} = useAction()
-
-    useEffect(()=> {
-        clearPostStore()
-
-    }, [])
 
     useFetchPosts(pageNumber, limit)
 
