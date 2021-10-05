@@ -4,41 +4,74 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="init next and update gitignore file">
-      <change afterPath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/layouts/login.layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/account.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/login.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/logout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/post/[id].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/post/all.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/post/create.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/post/delete/[id].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/post/edit/[id].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/register.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/user/[id].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/users.tsx" afterDir="false" />
+    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="next.js pages . Fix fetch all post and user post (fix clear post)">
+      <change afterPath="$PROJECT_DIR$/frontend-next/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/.env.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/HOC/withAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/axios/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/404.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/CheckAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/ErrorMessage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/fetchLoader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/fetchLoader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/loader.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/loader.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/textInput.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/account/changeUserData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/account/confirmUpdateData.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/main/main.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/filter.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/filter.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/postList.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/postList.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/postList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/context/AuthContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/context/ChangeUserDataContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/context/PageContext.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/useAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/useFetchPosts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/usePostObserver.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/useTypedSelector.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/fetchPosts.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/formikElements.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/router.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/layouts/context.layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/next.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/pages/login.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/actions/PostAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/actions/UserActions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/actions/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/redusers/post.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/redusers/user.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/rootReduser.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/types/PostTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/redux/types/UserTypes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/styles/App.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/styles/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/utils/checkAuth.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-next/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/UserActions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/RouterSwitch.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/styles/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/pages/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/WiredTiger.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-10--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-10--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/collection-12--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-12--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-2--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-2--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-4--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-4--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/index-11--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-11--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/index-13--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-13--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-3--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-3--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-5--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-5--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-6--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-6--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/journal/WiredTigerLog.0000000001" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/mongod.lock" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/mongod.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/sizeStorer.wt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,10 +83,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="TypeScript File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="SCSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -99,7 +132,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.17.6" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.17.6" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/frontend-next/layouts" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -108,11 +141,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\reactJWT\frontend-next\layouts" />
+      <recent name="D:\projects\reactJWT\frontend-next" />
+      <recent name="D:\projects\reactJWT\frontend-next\styles" />
       <recent name="D:\projects" />
       <recent name="E:\Projects\JwtAuth\html\styles" />
-      <recent name="E:\Projects\JwtAuth\html" />
-      <recent name="E:\Projects\JwtAuth\frontend\src\pages" />
-      <recent name="E:\Projects\JwtAuth\frontend\src\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\post" />
@@ -247,7 +280,8 @@
       <workItem from="1633205068594" duration="687000" />
       <workItem from="1633247075900" duration="594000" />
       <workItem from="1633288225626" duration="643000" />
-      <workItem from="1633332935001" duration="8163000" />
+      <workItem from="1633332935001" duration="10133000" />
+      <workItem from="1633415403695" duration="14490000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -375,7 +409,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633205343169</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="next.js pages . Fix fetch all post and user post (fix clear post)">
+      <created>1633379277082</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1633379277082</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +459,8 @@
     <MESSAGE value="Add Docker dev mode. Fix user's title. Fix fetch all posts and user posts. Protect post edit and delete by id" />
     <MESSAGE value="init next" />
     <MESSAGE value="init next and update gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="init next and update gitignore file" />
+    <MESSAGE value="next.js pages . Fix fetch all post and user post (fix clear post)" />
+    <option name="LAST_COMMIT_MESSAGE" value="next.js pages . Fix fetch all post and user post (fix clear post)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,8 +1,10 @@
+import LoginLayout from "../layouts/auth.layout";
+
 const Index = () => {
     return (
-        <div>
+        <LoginLayout>
             <h1>Main page</h1>
-        </div>
+        </LoginLayout>
     );
 };
 

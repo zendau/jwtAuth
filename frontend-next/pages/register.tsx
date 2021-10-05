@@ -1,8 +1,11 @@
+import withAuth from "../HOC/withAuth";
+import LoginLayout from "../layouts/auth.layout";
+
 const Register = () => {
     return (
-        <div>
+        <LoginLayout>
             <h1>Register</h1>
-        </div>
+        </LoginLayout>
     );
 };
 
