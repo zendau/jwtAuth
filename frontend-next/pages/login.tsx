@@ -13,7 +13,7 @@ import { useRouter } from 'next/router'
 import { Formik } from 'formik';
 import IFormikElements from "../interfaces/formikElements";
 
-import styles from "./login.module.scss"
+import styles from "../styles/login.module.scss"
 
 
 const Login = () => {
@@ -47,9 +47,9 @@ const Login = () => {
 
     return (
         <LoginLayout>
-            <section className={styles.authContainer}>
+            <section className={styles.auth_container}>
                 <div className={styles.auth__wrapper}>
-                    <div className={styles.auth__formContainer}>
+                    <div className={styles["auth__form-container"]}>
                         <ErrorMessage message={state.error} timeout={5000} />
                         <Formik
                             initialValues={{ email: '', password: '' }}
@@ -88,7 +88,7 @@ const Login = () => {
                                         value={values.password}
                                         setValue={handleChange}
                                     />
-                                    <button className="btn auth__btn" type="submit" disabled={isSubmitting}>
+                                    <button className={`${styles.auth__btn} btn`} type="submit" disabled={isSubmitting}>
                                         Login
                                     </button>
                                 </form>

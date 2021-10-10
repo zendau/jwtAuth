@@ -5,6 +5,9 @@ import $api from "../../axios"
 import {UserActionType, userTypes} from "../types/UserTypes"
 import {IFetchUser} from "../../interfaces/user"
 import {postTypes} from "../types/PostTypes";
+import {AxiosResponse} from "axios";
+
+
 
 export const userAuth = (email: string | undefined, password: string | undefined,  setAuthStatus: (status: boolean) => void, type: string, route:  {(path: string, state?: unknown): void}) => {
 
@@ -12,7 +15,7 @@ export const userAuth = (email: string | undefined, password: string | undefined
         try {
             dispatch({type: userTypes.USER_LOGIN})
 
-            const userData = await $api.post<IFetchUser>(`/user/${type}`, {
+            const userData = await $api.post<any>(`/user/${type}`, {
                 email, password
             })
 
@@ -46,7 +49,7 @@ export const checkAuth = (setAuthStatus: (status: boolean) => void) => {
         try {
             dispatch({type: userTypes.USER_LOGIN})
 
-            const fetchData = await $api.get(`/user/refresh`)
+            const fetchData = await $api.get<any>(`/user/refresh`)
 
             if (fetchData.data.errors) {
                 throw new Error(fetchData.data.message)
@@ -107,7 +110,7 @@ export const getAllUsers = () => {
 export const userDataUpdateRequest = (userId : string, newEmail: string) => {
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
-            const fetchData = await $api.post(`/user/update`, {
+            const fetchData = await $api.post<any>(`/user/update`, {
                 userId, newEmail
             })
 
@@ -131,7 +134,7 @@ export const userDataUpdateRequest = (userId : string, newEmail: string) => {
 export const SendCodeForUpdateRequest = (userId : string, newEmail: string, newPassword: string, code: string) => {
     return async (dispatch: Dispatch<UserActionType>) => {
         try {
-            const fetchData = await $api.put(`/user/saveNewData`, {
+            const fetchData = await $api.put<any>(`/user/saveNewData`, {
                 userId, code, newEmail, newPassword
             })
 

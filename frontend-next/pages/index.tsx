@@ -9,3 +9,16 @@ const Index = () => {
 };
 
 export default Index;
+
+export async function getServerSideProps(ctx) {
+
+    if(ctx.resolvedUrl == "/") {
+        return {
+            redirect: {
+                destination: '/login',
+                permanent: false,
+            },
+        }
+    }
+
+}

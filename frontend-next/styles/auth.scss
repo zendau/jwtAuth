@@ -1,7 +1,7 @@
-@import "./styles/variables";
+@import "variables";
 
 .auth {
-  &-container {
+  &_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,6 +35,7 @@
     margin-top: 15px;
     align-self: center;
     transition: .5s ease;
+    line-height: 0!important;
 
     &:hover {
       opacity: .8;

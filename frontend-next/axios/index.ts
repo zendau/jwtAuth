@@ -3,7 +3,9 @@ import axios from "axios"
 import {IFetchUser} from "../interfaces/user"
 
 
-export const API_URL = process.env.VITE_API_URL
+export const API_URL = process.env.API_URL
+
+console.log(API_URL)
 
 const $api = axios.create({
     withCredentials: true,

@@ -4,75 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="next.js pages . Fix fetch all post and user post (fix clear post)">
-      <change afterPath="$PROJECT_DIR$/frontend-next/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/.env.local" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/HOC/withAuth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/axios/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/404.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/CheckAuth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/ErrorMessage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/fetchLoader.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/fetchLoader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/loader.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/loader.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/UI/textInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/account/changeUserData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/account/confirmUpdateData.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/main/main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/filter.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/filter.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/postList.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/postList.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/components/posts/postList.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/context/AuthContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/context/ChangeUserDataContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/context/PageContext.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/useAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/useFetchPosts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/usePostObserver.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/hooks/useTypedSelector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/fetchPosts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/formikElements.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/post.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/router.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/layouts/context.layout.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/next.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/_app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/pages/login.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/actions/PostAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/actions/UserActions.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/actions/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/redusers/post.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/redusers/user.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/rootReduser.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/types/PostTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/redux/types/UserTypes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/styles/App.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/styles/variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend-next/utils/checkAuth.ts" afterDir="false" />
+    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="content transfer">
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/navbar/navbar.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/components/navbar/navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/interfaces/IPath.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/styles/auth.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend-next/styles/register.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/.env.local" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/axios/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/axios/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.module.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/layouts/auth.layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-next/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/pages/login.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/styles/login.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-next/pages/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend-next/pages/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/register.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/router/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend-next/redux/actions/UserActions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/redux/actions/UserActions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/WiredTiger.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-10--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-10--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-2--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-2--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-4--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-4--7308928930411521637.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongoDB/index-11--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-11--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-3--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-3--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-5--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-5--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-6--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-6--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/sizeStorer.wt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,14 +107,14 @@
       <recent name="E:\Projects\JwtAuth\html\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\reactJWT\frontend-next\styles" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\post" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\post\createPost" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\post\readPost" />
       <recent name="E:\Projects\JwtAuth\frontend\src\pages\account" />
-      <recent name="E:\Projects\JwtAuth\frontend\src\pages\users" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.start:next">
+  <component name="RunManager" selected="npm.start:server">
     <configuration name="docker dev" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -281,7 +240,10 @@
       <workItem from="1633247075900" duration="594000" />
       <workItem from="1633288225626" duration="643000" />
       <workItem from="1633332935001" duration="10133000" />
-      <workItem from="1633415403695" duration="14490000" />
+      <workItem from="1633415403695" duration="14821000" />
+      <workItem from="1633535758526" duration="387000" />
+      <workItem from="1633670350237" duration="1940000" />
+      <workItem from="1633860321123" duration="10744000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -416,7 +378,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633379277082</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="content transfer">
+      <created>1633467113810</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1633467113810</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +429,8 @@
     <MESSAGE value="init next" />
     <MESSAGE value="init next and update gitignore file" />
     <MESSAGE value="next.js pages . Fix fetch all post and user post (fix clear post)" />
-    <option name="LAST_COMMIT_MESSAGE" value="next.js pages . Fix fetch all post and user post (fix clear post)" />
+    <MESSAGE value="content transfer" />
+    <option name="LAST_COMMIT_MESSAGE" value="content transfer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
