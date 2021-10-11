@@ -4,6 +4,8 @@ import {useChangeUserDataContext} from "../../context/ChangeUserDataContext";
 import {useAction} from "../../hooks/useAction";
 import ErrorMessage from "../UI/ErrorMessage";
 
+import styles from "../../styles/confirmUpdateData.module.scss"
+
 const ConfirmUpdateData = () => {
 
     const {confirmCode, id, error} = useTypedSelector(state => state.user)
@@ -20,9 +22,9 @@ const ConfirmUpdateData = () => {
 
     return (
 
-        <div className="account__confirm-code">
+        <div className={styles.account__confirmCode}>
 
-            <h2 className="account__title">Confirm code</h2>
+            <h2 className={styles.account__title}>Confirm code</h2>
 
             <ErrorMessage message={error} timeout={5000}/>
             <form>
@@ -31,7 +33,7 @@ const ConfirmUpdateData = () => {
                     <input type="text" id="confirmCode" placeholder="Confirm code" value={code} onChange={(e) => setCode(e.target.value)}/>
                     <p className="letters"><span>30</span> Characters remaining</p>
                 </div>
-                <input type="button" onClick={sendConfirmCode} className="btn account__btn" value="Confirm change user data"/>
+                <input type="button" onClick={sendConfirmCode} className={`btn ${styles['account__btn']}`} value="Confirm change user data"/>
             </form>
         </div>
     );

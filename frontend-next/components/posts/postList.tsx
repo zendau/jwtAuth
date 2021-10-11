@@ -1,13 +1,12 @@
-import React, {useEffect, useMemo, useState, Suspense, useContext} from 'react';
+import React, {useEffect, useMemo, useState, useContext} from 'react';
 import {IPost} from "../../interfaces/post";
-import {Link} from "react-router-dom";
+import Link from "next/link";
 
-import "./postList.module.scss"
+import styles from  "../../styles/postList.module.scss"
 import {PageContext} from "../../context/PageContext";
 import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {usePostObserver} from "../../hooks/usePostObserver";
 import Filter from "./filter";
-import FetchLoader from "../UI/fetchLoader";
 
 interface IPostList {
     author?: string
@@ -57,35 +56,35 @@ const PostList : React.FC<IPostList> = ({author}) => {
 
         if (isLast) {
             return (
-                <div ref={observerCallback} key={postData.id} className="post">
-                    <div className="post__header">
-                        <h2 className="post__title">{postData.title}</h2>
+                <div ref={observerCallback} key={postData.id} className={styles["post"]}>
+                    <div className={styles["post__header"]}>
+                        <h2 className={styles["post__title"]}>{postData.title}</h2>
                         <small>{postData.date}</small>
-                        <p className="post__body">{postData.author.email}</p>
+                        <p className={styles["post__body"]}>{postData.author.email}</p>
                     </div>
-                    <div className="post__footer">
-                        <Link to={`/post/${postData.id}`} className="btn post__btn">Read post</Link>
-                        <p className="post__author">{postData.author.email}</p>
+                    <div className={styles["post__footer"]}>
+                        <Link href={`/post/${postData.id}`}><a className={`btn ${styles['post__btn']}`}>Read post</a></Link>
+                        <p className={styles["post__author"]}>{postData.author.email}</p>
                     </div>
                 </div>)
         } else {
             return (
-                <div key={postData.id} className="post">
-                    <div className="post__header">
-                        <h2 className="post__title">{postData.title}</h2>
+                <div key={postData.id} className={styles["post"]}>
+                    <div className={styles["post__header"]}>
+                        <h2 className={styles["post__title"]}>{postData.title}</h2>
                         <small>{postData.date}</small>
-                        <p className="post__body">{postData.author.email}</p>
+                        <p className={styles["post__body"]}>{postData.author.email}</p>
                     </div>
-                    <div className="post__footer">
-                        <Link to={`/post/${postData.id}`} className="btn post__btn">Read post</Link>
-                        <p className="post__author">{postData.author.email}</p>
+                    <div className={styles["post__footer"]}>
+                        <Link href={`/post/${postData.id}`}><a className={`btn ${styles['post__btn']}`}>Read post</a></Link>
+                        <p className={styles["post__author"]}>{postData.author.email}</p>
                     </div>
                 </div>)
         }
 
     }
     return (
-        <Suspense fallback={<FetchLoader/>}>
+        <>
             <Filter
                 filterType={filterType}
                 setFilterType={setFilterType}
@@ -95,7 +94,7 @@ const PostList : React.FC<IPostList> = ({author}) => {
             {filterPostsByName.length !== 0 ?
                 <>
                     <section className="posts-container">
-                        {author ? <h1 className="posts__title">{author}'s posts</h1> : ""}
+                        {author ? <h1 className={styles["posts__title"]}>{author}'s posts</h1> : ""}
                         {filterPostsByName.map((post,index) =>
                             filterPostsByName.length === index + 1 ? generateCard(post, true)
                             : generateCard(post, false)
@@ -106,7 +105,7 @@ const PostList : React.FC<IPostList> = ({author}) => {
                 <h1 className="message-info">No have posts</h1>
             }
 
-        </Suspense>
+        </>
     )
 }
 

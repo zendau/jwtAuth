@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import "./filter.module.scss"
+import styles from "../../styles/filter.module.scss"
 
 interface IFilter {
     filterType: string
@@ -18,17 +18,17 @@ const Filter : React.FC<IFilter> = ({filterName, setFilterName, filterType, setF
     }
 
     return (
-        <section className="filter-container">
+        <section className={styles["filter-container"]}>
 
-            <div className="filter__panel">
-                <button onClick={() => setFilterStatus(!filterStatus)} className={filterStatus ? "btn filter__show filter__show--active" : "btn filter__show"}>Filters</button>
-                <div className={filterStatus ? "filter__body filter__body--active" : "filter__body"}>
-                    <div className="filter__search">
+            <div className={styles["filter__panel"]}>
+                <button onClick={() => setFilterStatus(!filterStatus)} className={filterStatus ? `btn ${styles['filter__show']}  ${styles['filter__show--active']}` : `btn ${styles['filter__show']}`}>Filters</button>
+                <div className={filterStatus ? `${styles['filter__body']} ${styles['filter__body--active']}` : `${styles['filter__body']}`}>
+                    <div className={styles["filter__search"]}>
                         <label htmlFor="filterSearch">Search by title:</label>
                         <input id="filterSearch" type="text" value={filterName} onChange={(e) => setFilterName(e.target.value)}/>
                     </div>
 
-                    <div className="filter__sort"  onChange={onChangeValue}>
+                    <div className={styles["filter__sort"]}  onChange={onChangeValue}>
                         <p>Sort by type</p>
 
                         <input type="radio" id="sortDate"
@@ -44,7 +44,7 @@ const Filter : React.FC<IFilter> = ({filterName, setFilterName, filterType, setF
                                     <label htmlFor="sortAuthor">By author name</label>
                     </div>
 
-                    <div className="filter__limit">
+                    <div className={styles["filter__limit"]}>
                         <label htmlFor="filterLimit">Post on page:</label>
                         <select id="filterLimit">
                             <option value="5">5</option>

@@ -1,4 +1,4 @@
-import LoginLayout from "../layouts/auth.layout";
+import LoginLayout from "../layouts/login.layout";
 
 
 import {useTypedSelector} from "../hooks/useTypedSelector";

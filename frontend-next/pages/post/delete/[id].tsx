@@ -1,8 +1,10 @@
+import AuthLayout from "../../../layouts/auth.layout";
+
 const DeletePost = () => {
     return (
-        <div>
+        <AuthLayout>
             <h1>DeletePost page</h1>
-        </div>
+        </AuthLayout>
     );
 };
 

@@ -3,6 +3,7 @@ import {useTypedSelector} from "../../hooks/useTypedSelector";
 import {useAction} from "../../hooks/useAction";
 import {useChangeUserDataContext} from "../../context/ChangeUserDataContext";
 import ErrorMessage from "../UI/ErrorMessage";
+import styles from "../../styles/changeUserData.module.scss";
 
 interface IChangeUserData {
     setStatus: React.Dispatch<React.SetStateAction<boolean>>
@@ -33,9 +34,9 @@ const ChangeUserData : React.FC<IChangeUserData> = ({setStatus}) => {
 
     return (
 
-        <div className="account__change-data-container">
+        <div className={styles['account__change-data-container']}>
 
-            <h2 className="account__title">Change user email and password</h2>
+            <h2 className={styles.account__title}>Change user email and password</h2>
 
             <ErrorMessage message={error} timeout={5000}/>
 
@@ -52,10 +53,14 @@ const ChangeUserData : React.FC<IChangeUserData> = ({setStatus}) => {
                     <p className="letters"><span>30</span> Characters remaining</p>
                 </div>
 
-                <input type="button" className="btn account__btn" onClick={sendReqToUpdateData} value="Change user data"/>
+                <input type="button" className={`btn ${styles['account__btn']}`} onClick={sendReqToUpdateData} value="Change user data"/>
 
             </form>
-
+            <style jsx>
+                {`
+      
+                `}
+            </style>
         </div>
 
     );

@@ -3,17 +3,16 @@ import {Dispatch} from "redux";
 
 import $api from "../../axios"
 import {IPost} from "../../interfaces/post"
-import {History} from 'history';
 import IFetchPosts from "../../interfaces/fetchPosts";
 import {useContext} from "react";
 import {PageContext} from "../../context/PageContext";
 
-export const createPost = (title: string, body: string, author: string, history: History) => {
+export const createPost = (title: string, body: string, author: string, history: any) => {
     return async  (dispatch: Dispatch<PostActionType>) => {
         try {
             dispatch({type: postTypes.POST_FETCH})
 
-            const postData = await $api.post<IPost>("/post/create", {
+            const postData = await $api.post<any>("/post/create", {
                 author, title, body
             })
 
@@ -34,7 +33,7 @@ export const editPost = (postId: string, userId: string, title: string, body: st
 
             debugger
 
-            const postData = await $api.post<IPost>("/post/edit", {
+            const postData = await $api.post<any>("/post/edit", {
                 postId, userId, title, body
             })
 
