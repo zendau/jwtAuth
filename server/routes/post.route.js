@@ -8,7 +8,7 @@ router.post("/create", PostController.create)
 router.post("/edit", PostController.edit)
 router.get("/delete/:id", PostController.delete)
 router.get("/get/:id", PostController.getOne)
-router.get("/getUserPosts/:id", PostController.getUserPosts)
+router.get("/getUserPosts/", PostController.getUserPosts)
 router.get("/getAllPosts", PostController.getAllPosts)
 router.get("/getLimitPosts", PostController.getLimitPosts)
 

@@ -22,7 +22,7 @@ const PostList : React.FC<IPostList> = ({author}) => {
 
     const [postList, setPostList] = useState<IPost[]>([])
 
-    const {setPageNumber} = useContext(PageContext)
+    const {setPageNumber,} = useContext(PageContext)
 
 
     useEffect(() => {
@@ -40,9 +40,6 @@ const PostList : React.FC<IPostList> = ({author}) => {
         }
 
     }, [filterType])
-
-
-
 
 
     const observerCallback = usePostObserver(setPageNumber, hasMore)

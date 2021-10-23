@@ -8,7 +8,7 @@ const AllPosts = () => {
 
     const {pageNumber, limit} = useContext(PageContext)
 
-    useFetchPosts(pageNumber, limit)
+    useFetchPosts(pageNumber, 5)
 
     return (
         <AuthLayout>

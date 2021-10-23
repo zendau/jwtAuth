@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 
 import "./filter.scss"
+import {PageContext} from "../../context/PageContext";
+import {clearPostStore} from "../../redux/actions/PostAction";
 
 interface IFilter {
     filterType: string
@@ -13,8 +15,14 @@ const Filter : React.FC<IFilter> = ({filterName, setFilterName, filterType, setF
 
     const [filterStatus, setFilterStatus] = useState(false)
 
+    const {setLimit, limit, setPageNumber} = useContext(PageContext)
+
     function onChangeValue(event: any) {
         setFilterType(event.target.value)
+    }
+
+    function onSelectValue(event: any) {
+        setLimit(event.target.value)
     }
 
     return (
@@ -46,12 +54,12 @@ const Filter : React.FC<IFilter> = ({filterName, setFilterName, filterType, setF
 
                     <div className="filter__limit">
                         <label htmlFor="filterLimit">Post on page:</label>
-                        <select id="filterLimit">
-                            <option value="5">5</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="0">All</option>
+                        <select value={limit.toString()} id="filterLimit" onChange={onSelectValue}>
+                            <option value={5}>5</option>
+                            <option value={10}>10</option>
+                            <option value={15}>15</option>
+                            <option value={20}>20</option>
+                            <option value={0}>All</option>
                         </select>
                     </div>
                 </div>

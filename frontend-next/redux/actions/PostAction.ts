@@ -106,12 +106,16 @@ export const getLimitPosts = (currentPage: number, limit: number) => {
         try {
             dispatch({type: postTypes.POST_FETCH})
 
+            console.log(currentPage, limit)
+
             const postData = await $api.get<IFetchPosts>("/post/getLimitPosts", {
                 params: {
                     currentPage,
                     limit
                 }
             })
+
+            console.log(postData)
 
             dispatch({type: postTypes.SET_HAS_MORE, payload: postData.data.nextPage})
             dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data.post})

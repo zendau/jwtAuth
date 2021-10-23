@@ -1,14 +1,24 @@
-import {useEffect, useState} from "react";
+import {useContext, useEffect} from "react";
 import {useAction} from "./useAction";
 import {useTypedSelector} from "./useTypedSelector";
+import {PageContext} from "../context/PageContext";
+import {clearPostStore} from "../redux/actions/PostAction";
 
 
-export const useFetchPosts = (currentPage: number, limit: number) => {
+export const useFetchPosts = (currentPage: number) => {
 
-    console.log("CURRENT PAGE", currentPage)
     const {getLimitPosts} = useAction()
     const {hasMore} = useTypedSelector(state => state.post)
 
+    const {limit, setPageNumber} = useContext(PageContext)
+
+    const {clearPostStore} = useAction()
+
+    useEffect(() => {
+        clearPostStore()
+        setPageNumber(1)
+
+    }, [limit])
 
     useEffect(() => {
 
@@ -16,9 +26,6 @@ export const useFetchPosts = (currentPage: number, limit: number) => {
             getLimitPosts(currentPage, limit)
         }
 
-
-    }, [currentPage])
-
-
+    }, [currentPage, limit, hasMore])
 
 }

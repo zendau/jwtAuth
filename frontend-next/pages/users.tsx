@@ -6,7 +6,7 @@ import {useEffect} from "react";
 
 import styles from "../styles/users.module.scss"
 
-const Users = () => {
+const Users = ({usersProps}) => {
 
     const {users} = useTypedSelector(state => state.user)
 
@@ -15,6 +15,7 @@ const Users = () => {
     useEffect(() => {
         getAllUsers()
     }, [])
+
 
     return (
         <AuthLayout>

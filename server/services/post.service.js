@@ -73,14 +73,6 @@ class PostService {
 
     }
 
-    async getAllUserPosts(userId) {
-        const posts = await postModel.find().where("author").equals(userId).populate("author")
-
-        const postsDto = posts.map(post => this.postDtoFromPopulate(post))
-
-        return postsDto
-    }
-
     async getAllPosts() {
         const posts = await postModel.find().populate("author")
 
@@ -89,9 +81,31 @@ class PostService {
         return postsDto
     }
 
+    // async getAllUserPosts(userId) {
+    //     const posts = await postModel.find().where("author").equals(userId).populate("author")
+    //     const postsDto = posts.map(post => this.postDtoFromPopulate(post))
+    //
+    //     return postsDto
+    // }
+
+    postsToDTO(posts) {
+        const postsDto = posts.map(post => this.postDtoFromPopulate(post))
+        return postsDto
+    }
+
     async getLimitPosts(currentPage, limit) {
         const posts = await postModel.find().populate("author")
+        return this.getPosts(posts, currentPage, limit)
+    }
 
+
+    async getLimitUserPosts(currentPage, limit, userId) {
+        const posts = await postModel.find().where("author").equals(userId).populate("author")
+        return this.getPosts(posts, currentPage, limit)
+    }
+
+
+    async getPosts(posts, currentPage, limit) {
         const countPosts = posts.length
 
         const pages = Math.floor(countPosts / limit)
@@ -101,7 +115,7 @@ class PostService {
 
                 if (limit === 0 || limit > countPosts) {
 
-                    const postsDto = await this.getAllPosts()
+                    const postsDto = await this.postsToDTO(posts)
 
                     return { nextPage: false, post: postsDto}
 
@@ -120,7 +134,7 @@ class PostService {
 
             if (parseInt(limit) === 0 || limit > countPosts) {
 
-                const postsDto = await this.getAllPosts()
+                const postsDto = await this.postsToDTO(posts)
 
                 return { nextPage: false, post: postsDto}
 
@@ -131,10 +145,6 @@ class PostService {
             const postsDto = postsOnPage.map(post => this.postDtoFromPopulate(post))
             return { nextPage: true, post: postsDto}
         }
-
-
-
-
     }
 
 

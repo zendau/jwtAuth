@@ -5,8 +5,6 @@ import $api from "../../axios"
 import {IPost} from "../../interfaces/post"
 import {History} from 'history';
 import IFetchPosts from "../../interfaces/fetchPosts";
-import {useContext} from "react";
-import {PageContext} from "../../context/PageContext";
 
 export const createPost = (title: string, body: string, author: string, history: History) => {
     return async  (dispatch: Dispatch<PostActionType>) => {
@@ -71,14 +69,21 @@ export const deletePost = (postId: string, posts: IPost[]) => {
     }
 }
 
-export const getAllUserPosts = (userId: string) => {
+export const getAllUserPosts = (userId: string, currentPage: number, limit: number) => {
     return async  (dispatch: Dispatch<PostActionType>) => {
         try {
             dispatch({type: postTypes.POST_FETCH})
 
-            const postData = await $api.get<IPost[]>("/post/getUserPosts/"+ userId)
+            const postData = await $api.get<IFetchPosts>("/post/getUserPosts/", {
+                params: {
+                    currentPage,
+                    limit,
+                    userId
+                }
+            })
 
-            dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data})
+            dispatch({type: postTypes.SET_HAS_MORE, payload: postData.data.nextPage})
+            dispatch({type: postTypes.POSTS_FETCH_SUCCESS, payload: postData.data.post})
 
         }catch (e: any) {
             dispatch({type: postTypes.POST_FETCH_ERROR, payload: e.response.data.message})

@@ -53,8 +53,8 @@ class PostController {
 
     async getUserPosts(req, res, next) {
         try {
-
-            const data = await PostService.getAllUserPosts(req.params.id)
+            const {currentPage, limit, userId} = req.query
+            const data = await PostService.getLimitUserPosts(currentPage, limit, userId)
             res.json(data)
 
         } catch (e) {

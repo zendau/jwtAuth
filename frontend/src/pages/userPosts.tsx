@@ -16,7 +16,9 @@ const UserPosts : React.FC = () => {
 
     const {getAllUserPosts, clearPostStore} = useAction()
 
-    const {setPageNumber} = useContext(PageContext)
+    const [pageNumber, setPageNumber] = useState(1)
+    const [limit, setLimit] = useState(5)
+
 
     const {userId} = useParams<IParams>()
 
@@ -26,7 +28,7 @@ const UserPosts : React.FC = () => {
 
     useEffect(() => {
         clearPostStore()
-        getAllUserPosts(userId)
+        getAllUserPosts(userId, pageNumber, limit)
 
         console.log(users)
 
@@ -43,10 +45,17 @@ const UserPosts : React.FC = () => {
     }, [])
 
 
+    useEffect(() => {
+        console.log("change page number")
+        getAllUserPosts(userId, pageNumber, limit)
+    }, [pageNumber])
+
+
+
     return (
-        <>
+        <PageContext.Provider value={{pageNumber, setPageNumber, limit, setLimit}}>
             <PostList author={userName} />
-        </>
+        </PageContext.Provider>
     );
 };
 
