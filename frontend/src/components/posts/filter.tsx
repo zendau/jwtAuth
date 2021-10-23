@@ -18,6 +18,7 @@ const Filter : React.FC<IFilter> = ({filterName, setFilterName, filterType, setF
     const {setLimit, limit, setPageNumber} = useContext(PageContext)
 
     function onChangeValue(event: any) {
+        console.log("change type")
         setFilterType(event.target.value)
     }
 
@@ -40,11 +41,11 @@ const Filter : React.FC<IFilter> = ({filterName, setFilterName, filterType, setF
                         <p>Sort by type</p>
 
                         <input type="radio" id="sortDate"
-                               name="sortType" value="date" defaultChecked={true} />
+                               name="sortType" value="date" />
                             <label htmlFor="sortDate">By date</label>
 
                             <input type="radio" id="sortTitle"
-                                   name="sortType" value="titleName" />
+                                   name="sortType" value="titleName" defaultChecked={true}  />
                                 <label htmlFor="sortTitle">By title name</label>
 
                                 <input type="radio" id="sortAuthor"

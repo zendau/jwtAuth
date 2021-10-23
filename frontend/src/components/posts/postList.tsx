@@ -26,10 +26,8 @@ const PostList : React.FC<IPostList> = ({author}) => {
 
 
     useEffect(() => {
-        setPostList(posts)
-    }, [posts])
 
-    useEffect(() => {
+        console.log("CHANGE TYPE")
 
         if (filterType === "date") {
             setPostList([...posts.sort((a: IPost, b : IPost) => a.date.localeCompare(b.date))])
@@ -39,7 +37,7 @@ const PostList : React.FC<IPostList> = ({author}) => {
             setPostList([...posts.sort((a: IPost, b : IPost) => a.author.email.localeCompare(b.author.email))])
         }
 
-    }, [filterType])
+    }, [posts, filterType])
 
 
     const observerCallback = usePostObserver(setPageNumber, hasMore)

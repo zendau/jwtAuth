@@ -4,35 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="account, posts all, user posts, read post , create post  and users page transfer.">
+    <list default="true" id="f0e154de-351e-4eea-8e37-0eeb845b1799" name="Default Changelist" comment="repair filter number of posts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/pages/post/all.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/post/all.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/pages/users.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/pages/users.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-next/redux/actions/PostAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend-next/redux/actions/PostAction.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/filter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/filter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/posts/postList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/hooks/useFetchPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/hooks/useFetchPosts.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/post/allPosts.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/userPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/redux/actions/PostAction.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/WiredTiger.turtle" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/WiredTiger.turtle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/WiredTiger.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/WiredTiger.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-10--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-10--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/collection-12--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-12--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/collection-2--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-2--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/collection-4--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/collection-4--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/index-13--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-13--7308928930411521637.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mongoDB/index-3--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-3--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-5--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-5--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/index-6--7308928930411521637.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/index-6--7308928930411521637.wt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongoDB/sizeStorer.wt" beforeDir="false" afterPath="$PROJECT_DIR$/mongoDB/sizeStorer.wt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.env" beforeDir="false" afterPath="$PROJECT_DIR$/server/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/post.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/controllers/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/controllers/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/post.route.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/post.route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/services/post.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/services/post.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +79,7 @@
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-    <property name="ts.external.directory.path" value="D:\projects\reactJWT\frontend-next\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\projects\reactJWT\frontend\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -255,7 +238,7 @@
       <workItem from="1634843824260" duration="3471000" />
       <workItem from="1634913402658" duration="167000" />
       <workItem from="1634913789749" duration="20234000" />
-      <workItem from="1634993523303" duration="1295000" />
+      <workItem from="1634993523303" duration="4094000" />
     </task>
     <task id="LOCAL-00001" summary="add route system">
       <created>1629666370741</created>
@@ -418,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633984819163</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="repair filter number of posts">
+      <created>1635002944972</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1635002944972</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -465,7 +455,8 @@
     <MESSAGE value="content transfer" />
     <MESSAGE value="login and register page transfer. Create next.js client side env" />
     <MESSAGE value="account, posts all, user posts, read post , create post  and users page transfer." />
-    <option name="LAST_COMMIT_MESSAGE" value="account, posts all, user posts, read post , create post  and users page transfer." />
+    <MESSAGE value="repair filter number of posts" />
+    <option name="LAST_COMMIT_MESSAGE" value="repair filter number of posts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

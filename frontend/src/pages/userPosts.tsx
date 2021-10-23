@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router";
 
 import {useTypedSelector} from "../hooks/useTypedSelector";
@@ -23,13 +23,11 @@ const UserPosts : React.FC = () => {
     const {userId} = useParams<IParams>()
 
     const {users} = useTypedSelector(state => state.user)
+    const {hasMore} = useTypedSelector(state => state.post)
 
     const [userName, setUserName] = useState("")
 
     useEffect(() => {
-        clearPostStore()
-        getAllUserPosts(userId, pageNumber, limit)
-
         console.log(users)
 
         const userData = users?.filter(user => user.id === userId)
@@ -44,13 +42,18 @@ const UserPosts : React.FC = () => {
         }
     }, [])
 
+    useEffect(() => {
+        clearPostStore()
+        setPageNumber(1)
+
+    }, [limit])
 
     useEffect(() => {
-        console.log("change page number")
-        getAllUserPosts(userId, pageNumber, limit)
-    }, [pageNumber])
+        if (hasMore) {
+            getAllUserPosts(userId, pageNumber, limit)
+        }
 
-
+    }, [pageNumber, limit, hasMore])
 
     return (
         <PageContext.Provider value={{pageNumber, setPageNumber, limit, setLimit}}>
